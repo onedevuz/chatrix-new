@@ -1175,6 +1175,31 @@ ul { list-style: none; }
   transform: translateY(100%); transition: transform .3s ease;
 }
 .sticky-cta.visible { transform: translateY(0); }
+
+/* ===== CHAT WIDGET POSITIONING — avoid overlap with sticky CTA and footer ===== */
+/* Push the launcher button up so it never sits on top of «Начните бесплатно» */
+.lc-root .lc-button,
+.lc-button {
+  bottom: 24px !important;
+  right: 24px !important;
+  transition: bottom .25s ease;
+}
+/* When sticky CTA is visible — lift launcher above it */
+body:has(.sticky-cta.visible) .lc-root .lc-button,
+body:has(.sticky-cta.visible) .lc-button {
+  bottom: 80px !important;
+}
+@media (max-width: 768px) {
+  .lc-root .lc-button,
+  .lc-button {
+    bottom: calc(16px + env(safe-area-inset-bottom)) !important;
+    right: 16px !important;
+  }
+  body:has(.sticky-cta.visible) .lc-root .lc-button,
+  body:has(.sticky-cta.visible) .lc-button {
+    bottom: calc(76px + env(safe-area-inset-bottom)) !important;
+  }
+}
 .sticky-cta span { font-size: 15px; font-weight: 600; }
 .sticky-close {
   position: absolute; right: 16px;
