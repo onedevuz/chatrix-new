@@ -175,6 +175,10 @@ ul { list-style: none; }
   margin-right: 16px;
 }
 .logo .dot { color: var(--text); }
+
+/* Mobile-only pseudo item — hidden on desktop, shown when burger opens */
+.mobile-only-login { display: none; }
+
 .nav-links {
   display: flex;
   gap: 0;
@@ -1335,7 +1339,17 @@ body:has(.sticky-cta.visible) .lc-button {
   .nav-links { display: none; }
   .burger { display: flex; }
   .nav-right { gap: 6px; }
-  .nav-cta .btn-ghost { display: none; }
+  /* «Войти» остаётся видимой на мобиле — компактный вариант */
+  .nav-cta { gap: 4px; }
+  .nav-cta .btn-ghost { padding: 6px 10px; font-size: 12px; }
+  .nav-cta .btn-primary { padding: 6px 10px; font-size: 12px; }
+  /* + дубликат в бургер-меню — на узких экранах кнопка «Войти» скрывается, юзер
+     открывает бургер и видит «Войти» отдельным пунктом меню */
+  .mobile-only-login { display: list-item !important; }
+  .mobile-only-login a {
+    color: var(--brand) !important;
+    font-weight: 600 !important;
+  }
 
   /* Hero */
   .hero { padding: 56px 0 0; }
