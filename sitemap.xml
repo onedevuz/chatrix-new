@@ -32,25 +32,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://prochat.uz/privacy</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://prochat.uz/terms</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
     <loc>https://prochat.uz/blog/5-oshibok-chat-na-sayte</loc>
-    <lastmod>2026-05-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://prochat.uz/blog/_article-template</loc>
     <lastmod>2026-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
