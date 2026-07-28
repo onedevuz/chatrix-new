@@ -136,6 +136,11 @@
       'a[href="../register.html"]',
       'a[href="./register.html"]',
       'a[href$="/register.html"]',
+      'a[href="register"]',
+      'a[href="/register"]',
+      'a[href="../register"]',
+      'a[href="./register"]',
+      'a[href$="/register"]',
       '[data-register]'
     ];
     document.querySelectorAll(selectors.join(',')).forEach(function (el) {
