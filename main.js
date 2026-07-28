@@ -144,6 +144,9 @@ const translations = {
     footer_docs: "Документация", footer_about: "О нас", footer_contacts: "Контакты",
     footer_city: "Ташкент, Узбекистан",
     footer_privacy: "Политика конфиденциальности", footer_terms: "Условия",
+    footer_payment: "Оплата", footer_pay_methods: "Способы оплаты", footer_refund: "Возврат средств",
+    footer_offer: "Публичная оферта", footer_antifraud: "Борьба с мошенничеством",
+    footer_secure: "Все платежи защищены по стандартам 3D Secure и PCI DSS",
   },
 
   uz: {
@@ -290,6 +293,9 @@ const translations = {
     footer_docs: "Hujjatlar", footer_about: "Biz haqimizda", footer_contacts: "Aloqa",
     footer_city: "Toshkent, O'zbekiston",
     footer_privacy: "Maxfiylik siyosati", footer_terms: "Shartlar",
+    footer_payment: "To'lov", footer_pay_methods: "To'lov usullari", footer_refund: "Pulni qaytarish",
+    footer_offer: "Ommaviy oferta", footer_antifraud: "Firibgarlikka qarshi kurash",
+    footer_secure: "Barcha to'lovlar 3D Secure va PCI DSS standartlari bilan himoyalangan",
   },
 
   en: {
@@ -436,6 +442,9 @@ const translations = {
     footer_docs: "Documentation", footer_about: "About", footer_contacts: "Contact",
     footer_city: "Tashkent, Uzbekistan",
     footer_privacy: "Privacy Policy", footer_terms: "Terms",
+    footer_payment: "Payment", footer_pay_methods: "Payment methods", footer_refund: "Refunds",
+    footer_offer: "Public offer", footer_antifraud: "Anti-fraud policy",
+    footer_secure: "All payments are protected with 3D Secure and PCI DSS",
   }
 };
 

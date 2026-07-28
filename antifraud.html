@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Борьба с мошенничеством · Prochat</title>
+  <meta name="description" content="Меры ограничения и контроля рисков мошеннических операций при оплате в сервисе Prochat: 3D Secure, PCI DSS, мониторинг транзакций." />
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="https://prochat.uz/antifraud.html" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=108679073', 'ym');
+
+    ym(108679073, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/108679073" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+<meta name="yandex-verification" content="09b8b38752fd0d95" />
+<meta name="google-site-verification" content="gb5edlbC3O5TXICdP6hZQjHWzo9-e7cvC1diKBjDDK4" />
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">prochat<span class="dot">.</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#features" data-i18n="nav_features">Возможности</a></li>
+      <li><a href="index.html#pricing" data-i18n="nav_pricing">Цены</a></li>
+      <li><a href="blog/index.html" data-i18n="nav_blog">Блог</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="#" class="btn-primary" data-i18n="nav_start">Начать бесплатно</a>
+      <button class="dark-toggle" id="darkToggle">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<main style="padding: 80px 0 120px;">
+  <div class="container" style="max-width: 760px;">
+    <h1 style="font-size: clamp(28px,4vw,40px); font-weight: 800; margin-bottom: 8px;">Борьба с мошенничеством</h1>
+    <p style="color: var(--text-muted); margin-bottom: 4px;">Меры ограничения и контроля рисков мошеннических операций</p>
+    <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 48px;">Последнее обновление: 28 июля 2026 г.</p>
+
+    <div class="legal-content">
+
+      <div class="legal-notice">
+        <p>Prochat совместно с банком-эквайером применяет комплекс мер по ограничению и контролю рисков мошеннических операций при оплате банковскими картами, реализуя ограничения, предусмотренные Договором интернет-эквайринга.</p>
+      </div>
+
+      <h2>1. Безопасность платежей</h2>
+      <p>Все платежи на сайте обрабатываются на защищённой платёжной странице банка-эквайера. Сервис Prochat не собирает, не обрабатывает и не хранит реквизиты банковских карт — ввод данных карты происходит исключительно на стороне банка в среде, сертифицированной по стандарту <strong>PCI DSS</strong>.</p>
+      <ul>
+        <li>Передача данных осуществляется по защищённому соединению (TLS).</li>
+        <li>Реквизиты карты недоступны сотрудникам Prochat ни в каком виде.</li>
+      </ul>
+
+      <h2>2. Технология 3D Secure</h2>
+      <p>Все операции по картам международных платёжных систем Visa и Mastercard, а также национальных платёжных систем Uzcard и Humo проходят обязательную проверку по технологии <strong>3D Secure</strong> (Verified by Visa / Mastercard Identity Check и аналоги национальных ПС): платёж подтверждается одноразовым кодом, который банк-эмитент направляет держателю карты (SMS/push).</p>
+
+      <h2>3. Контроль и мониторинг операций</h2>
+      <p>Для ограничения рисков мошеннических операций применяются возможности банка-эквайера по борьбе с мошенническими операциями:</p>
+      <ul>
+        <li>автоматический мониторинг операций фрод-системами банка в режиме реального времени;</li>
+        <li>ограничения по суммам и количеству операций, предусмотренные Договором интернет-эквайринга;</li>
+        <li>право банка и предприятия отклонить или приостановить подозрительную операцию до выяснения обстоятельств;</li>
+        <li>дополнительная проверка платежа с запросом подтверждения у держателя карты при выявлении признаков мошенничества;</li>
+        <li>возврат средств по операциям, признанным мошенническими, в порядке, установленном правилами платёжных систем.</li>
+      </ul>
+
+      <h2>4. Рекомендации держателям карт</h2>
+      <ul>
+        <li>Не сообщайте никому реквизиты карты, коды из SMS и CVV/CVC-код — сотрудники Prochat и банка никогда их не запрашивают.</li>
+        <li>Совершайте оплату только на официальном сайте <strong>prochat.uz</strong> и на платёжной странице банка, открывающейся с него.</li>
+        <li>Подключите SMS-уведомления об операциях в банке-эмитенте вашей карты.</li>
+      </ul>
+
+      <h2>5. Если вы заметили подозрительную операцию</h2>
+      <p>Если по вашей карте прошла операция, которую вы не совершали:</p>
+      <ul>
+        <li>незамедлительно обратитесь в банк, выпустивший карту, и заблокируйте её;</li>
+        <li>сообщите нам на <a href="mailto:support@prochat.uz">support@prochat.uz</a> с темой «Подозрительная операция» — мы оперативно передадим информацию банку-эквайеру и окажем содействие в разбирательстве.</li>
+      </ul>
+
+      <h2>6. Связанные документы</h2>
+      <ul>
+        <li><a href="terms.html">Публичная оферта</a></li>
+        <li><a href="help/payment-methods.html">Способы оплаты</a></li>
+        <li><a href="help/refund.html">Политика возврата средств</a></li>
+        <li><a href="privacy.html">Политика конфиденциальности</a></li>
+      </ul>
+
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-bottom">
+    <div class="container">
+      <span>© 2026 Prochat · YATT MOSKOVSEV A.A · ИНН 487064196 · <span data-i18n="footer_copy">Ташкент, Узбекистан</span></span>
+      <span class="footer-made-by">
+        <span data-i18n="footer_made_by">Разработано</span>
+        <a href="https://1dev.uz" target="_blank" rel="noopener" class="footer-made-link">1dev.uz</a>
+      </span>
+      <span><a href="privacy.html" data-i18n="footer_privacy">Конфиденциальность</a> · <a href="terms.html" data-i18n="footer_terms">Условия</a></span>
+    </div>
+  </div>
+</footer>
+
+<style>
+.legal-content h2{font-size:20px;font-weight:700;margin:40px 0 12px;color:var(--text)}
+.legal-content h3{font-size:16px;font-weight:600;margin:24px 0 8px;color:var(--text)}
+.legal-content p{margin-bottom:16px;color:var(--text);line-height:1.8}
+.legal-content ul{margin:0 0 16px 20px}
+.legal-content li{margin-bottom:8px;line-height:1.7;color:var(--text)}
+.legal-content a{color:var(--primary)}
+.legal-notice{background:var(--primary-light);border-left:4px solid var(--primary);border-radius:0 12px 12px 0;padding:16px 20px;margin-bottom:32px}
+.legal-notice p{margin:0;font-size:14px;line-height:1.7}
+[data-theme="dark"] .legal-notice{background:#312e81}
+</style>
+<script src="i18n-pages.js"></script>
+<!-- LiveChat AI widget -->
+<script>
+  window.LiveChatSetup = {
+    orgId: "ae1920f0-1499-43e0-b048-7a916dd355ea",
+    serverUrl: "https://api.prochat.uz"
+  };
+</script>
+<script async src="https://cdn.prochat.uz/widget.js"></script>
+<script defer src="register-modal.js?v=2"></script>
+</body>
+</html>
