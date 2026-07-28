@@ -6,6 +6,7 @@
       nav_start: "Начать бесплатно", nav_login: "Войти",
       footer_privacy: "Конфиденциальность", footer_terms: "Условия",
       footer_blog: "Блог", footer_copy: "Ташкент, Узбекистан",
+      footer_secure: "Все платежи защищены по стандартам 3D Secure и PCI DSS",
       // privacy
       priv_title: "Политика конфиденциальности",
       priv_updated: "Последнее обновление: 18 апреля 2026 г.",
@@ -32,6 +33,7 @@
       nav_start: "Bepul boshlash", nav_login: "Kirish",
       footer_privacy: "Maxfiylik", footer_terms: "Shartlar",
       footer_blog: "Blog", footer_copy: "Toshkent, O'zbekiston",
+      footer_secure: "Barcha to'lovlar 3D Secure va PCI DSS standartlari bilan himoyalangan",
       priv_title: "Maxfiylik siyosati",
       priv_updated: "Oxirgi yangilanish: 18 aprel 2026 yil",
       priv_effective: "2026 yil 1 yanvardan kuchga kirgan",
@@ -53,6 +55,7 @@
       nav_start: "Start free", nav_login: "Log in",
       footer_privacy: "Privacy", footer_terms: "Terms",
       footer_blog: "Blog", footer_copy: "Tashkent, Uzbekistan",
+      footer_secure: "All payments are protected with 3D Secure and PCI DSS",
       priv_title: "Privacy Policy",
       priv_updated: "Last updated: April 18, 2026",
       priv_effective: "Effective from January 1, 2026",

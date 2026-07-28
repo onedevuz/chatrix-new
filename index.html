@@ -156,7 +156,7 @@
             <div class="msg-time">14:33</div>
           </div>
           <div class="msg msg-agent">
-            <div class="msg-bubble" data-i18n="chat_msg3">Есть бесплатный план и Pro от 39€/мес. Показать подробнее?</div>
+            <div class="msg-bubble" data-i18n="chat_msg3">Есть бесплатный план и Business от 390 000 сум/мес. Показать подробнее?</div>
             <div class="msg-time">14:33</div>
           </div>
           <div class="msg msg-typing">
@@ -754,7 +754,7 @@
         <ul class="early-list">
           <li>
             <div class="early-icon">🔒</div>
-            <div><strong data-i18n="early_b1">Цена зафиксирована навсегда</strong><br/><span data-i18n="early_b1s">Ранние клиенты платят €15/мес всегда — даже когда тариф вырастет</span></div>
+            <div><strong data-i18n="early_b1">Цена зафиксирована навсегда</strong><br/><span data-i18n="early_b1s">Ранние клиенты платят 149 000 сум/мес за Start всегда — даже когда тариф вырастет</span></div>
           </li>
           <li>
             <div class="early-icon">📞</div>
@@ -1012,25 +1012,22 @@
         <a href="help/refund.html" data-i18n="footer_refund">Возврат средств</a>
         <a href="terms.html" data-i18n="footer_offer">Публичная оферта</a>
         <a href="antifraud.html" data-i18n="footer_antifraud">Борьба с мошенничеством</a>
-        <div class="pay-logos" aria-label="Visa, Mastercard, Uzcard, Humo">
-          <span class="pay-badge"><span class="pay-visa">VISA</span></span>
-          <span class="pay-badge"><svg width="30" height="19" viewBox="0 0 32 20" aria-label="Mastercard" role="img"><circle cx="12" cy="10" r="9" fill="#EB001B"/><circle cx="20" cy="10" r="9" fill="#F79E1B" fill-opacity="0.85"/></svg></span>
-          <span class="pay-badge"><span class="pay-uzcard">UZCARD</span></span>
-          <span class="pay-badge"><span class="pay-humo">HUMO</span></span>
-          <span class="pay-badge"><span class="pay-uzum">uzum bank</span></span>
+        <div class="fpay-row" aria-label="Visa, Mastercard, Humo, Uzcard, Uzum Bank, 3D Secure">
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="Visa"><rect width="58" height="38" rx="7" fill="#fff"/><text x="29" y="24" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="800" font-style="italic" fill="#1A1F71" letter-spacing="1">VISA</text></svg>
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="Mastercard"><rect width="58" height="38" rx="7" fill="#fff"/><circle cx="24" cy="19" r="10" fill="#EB001B"/><circle cx="34" cy="19" r="10" fill="#F79E1B"/><path d="M29 10.6a10 10 0 0 1 0 16.8 10 10 0 0 1 0-16.8z" fill="#FF5F00"/></svg>
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="Humo"><rect width="58" height="38" rx="7" fill="#101828"/><path d="M13 12c8-5 24-5 32 0" stroke="#E8C468" stroke-width="1.5" fill="none" opacity=".8"/><text x="29" y="26" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" fill="#E8C468" letter-spacing="1.5">HUMO</text></svg>
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="Uzcard"><rect width="58" height="38" rx="7" fill="#fff"/><rect x="24" y="8" width="10" height="3.5" rx="1.5" fill="#00B0AA"/><text x="29" y="26" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="10.5" font-weight="900" fill="#0047BB" letter-spacing=".5">UZCARD</text></svg>
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="Uzum Bank"><rect width="58" height="38" rx="7" fill="#fff"/><rect x="8" y="11" width="16" height="16" rx="5" fill="#7000FF"/><text x="16" y="23" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" fill="#fff">u</text><text x="29" y="18" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="800" fill="#240D4E">uzum</text><text x="29" y="27" font-family="Arial,Helvetica,sans-serif" font-size="8" font-weight="800" fill="#240D4E">bank</text></svg>
+          <svg class="fpay-b" width="58" height="38" viewBox="0 0 58 38" role="img" aria-label="3D Secure"><rect width="58" height="38" rx="7" fill="#fff"/><path d="M44 11l5 2v3.6c0 3-2.1 4.9-5 6-2.9-1.1-5-3-5-6V13z" fill="#16A34A" opacity=".9"/><text x="24" y="24" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="12.5" font-weight="900" fill="#0F172A" letter-spacing=".5">3DS</text></svg>
         </div>
-        <span class="pay-note" data-i18n="footer_secure">Все платежи защищены по стандартам 3D Secure и PCI DSS</span>
+        <span class="fpay-note" data-i18n="footer_secure">Все платежи защищены по стандартам 3D Secure и PCI DSS</span>
       </div>
     </div>
   </div>
   <style>
-    .pay-logos{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
-    .pay-badge{display:inline-flex;align-items:center;justify-content:center;background:#fff;border-radius:5px;height:27px;padding:0 8px;min-width:44px}
-    .pay-visa{font-weight:800;font-style:italic;font-size:13px;letter-spacing:.5px;color:#1A1F71}
-    .pay-uzcard{font-weight:800;font-size:11px;letter-spacing:.3px;color:#005BAA}
-    .pay-humo{font-weight:800;font-size:11px;letter-spacing:.5px;color:#0F172A}
-    .pay-uzum{font-weight:800;font-size:11px;letter-spacing:.2px;color:#7000FF}
-    .pay-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;max-width:220px;line-height:1.5}
+    .fpay-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;max-width:200px}
+    .fpay-b{display:block;border-radius:7px;box-shadow:0 1px 3px rgba(0,0,0,.3);height:34px;width:auto}
+    .fpay-note{font-size:12px;color:rgba(255,255,255,.5);margin-top:6px;max-width:220px;line-height:1.5}
   </style>
   <div class="footer-bottom">
     <div class="container">
