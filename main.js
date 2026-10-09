@@ -147,6 +147,8 @@ const translations = {
     footer_payment: "Оплата", footer_pay_methods: "Способы оплаты", footer_refund: "Возврат средств",
     footer_offer: "Публичная оферта", footer_antifraud: "Борьба с мошенничеством",
     footer_secure: "Все платежи защищены по стандартам 3D Secure и PCI DSS",
+    eco_label: "Сервисы платформы OneDev", eco_chat: "онлайн-чат", eco_video: "видеовстречи",
+    eco_note: "Оплаты сервисов платформы принимает YATT MOSKOVSEV A.A · ИНН 487064196",
   },
 
   uz: {
@@ -296,6 +298,8 @@ const translations = {
     footer_payment: "To'lov", footer_pay_methods: "To'lov usullari", footer_refund: "Pulni qaytarish",
     footer_offer: "Ommaviy oferta", footer_antifraud: "Firibgarlikka qarshi kurash",
     footer_secure: "Barcha to'lovlar 3D Secure va PCI DSS standartlari bilan himoyalangan",
+    eco_label: "OneDev platformasi xizmatlari", eco_chat: "onlayn-chat", eco_video: "videouchrashuvlar",
+    eco_note: "Platforma xizmatlari uchun to'lovlarni YATT MOSKOVSEV A.A qabul qiladi · STIR 487064196",
   },
 
   en: {
@@ -445,6 +449,8 @@ const translations = {
     footer_payment: "Payment", footer_pay_methods: "Payment methods", footer_refund: "Refunds",
     footer_offer: "Public offer", footer_antifraud: "Anti-fraud policy",
     footer_secure: "All payments are protected with 3D Secure and PCI DSS",
+    eco_label: "OneDev platform services", eco_chat: "live chat", eco_video: "video meetings",
+    eco_note: "Payments for platform services are received by YATT MOSKOVSEV A.A · TIN 487064196",
   }
 };
 
