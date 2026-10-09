@@ -176,7 +176,7 @@ ul { list-style: none; }
 }
 .logo .dot { color: var(--text); }
 
-/* Mobile-only pseudo item — hidden on desktop, shown when burger opens */
+/* Mobile-only pseudo item - hidden on desktop, shown when burger opens */
 .mobile-only-login { display: none; }
 
 .nav-links {
@@ -1180,7 +1180,7 @@ ul { list-style: none; }
 }
 .sticky-cta.visible { transform: translateY(0); }
 
-/* ===== CHAT WIDGET POSITIONING — avoid overlap with sticky CTA and footer ===== */
+/* ===== CHAT WIDGET POSITIONING - avoid overlap with sticky CTA and footer ===== */
 /* Push the launcher button up so it never sits on top of «Начните бесплатно» */
 .lc-root .lc-button,
 .lc-button {
@@ -1188,7 +1188,7 @@ ul { list-style: none; }
   right: 24px !important;
   transition: bottom .25s ease;
 }
-/* When sticky CTA is visible — lift launcher above it */
+/* When sticky CTA is visible - lift launcher above it */
 body:has(.sticky-cta.visible) .lc-root .lc-button,
 body:has(.sticky-cta.visible) .lc-button {
   bottom: 80px !important;
@@ -1323,7 +1323,7 @@ body:has(.sticky-cta.visible) .lc-button {
 .stat-big { transition: color .2s; }
 
 /* ============================================================
-   RESPONSIVE — TABLET 900px
+   RESPONSIVE - TABLET 900px
    ============================================================ */
 @media (max-width: 1100px) {
   .nav-links a { padding: 8px 7px; font-size: 12px; }
@@ -1339,11 +1339,11 @@ body:has(.sticky-cta.visible) .lc-button {
   .nav-links { display: none; }
   .burger { display: flex; }
   .nav-right { gap: 6px; }
-  /* «Войти» остаётся видимой на мобиле — компактный вариант */
+  /* «Войти» остаётся видимой на мобиле - компактный вариант */
   .nav-cta { gap: 4px; }
   .nav-cta .btn-ghost { padding: 6px 10px; font-size: 12px; }
   .nav-cta .btn-primary { padding: 6px 10px; font-size: 12px; }
-  /* + дубликат в бургер-меню — на узких экранах кнопка «Войти» скрывается, юзер
+  /* + дубликат в бургер-меню - на узких экранах кнопка «Войти» скрывается, юзер
      открывает бургер и видит «Войти» отдельным пунктом меню */
   .mobile-only-login { display: list-item !important; }
   .mobile-only-login a {
@@ -1418,7 +1418,7 @@ body:has(.sticky-cta.visible) .lc-button {
 }
 
 /* ============================================================
-   RESPONSIVE — MOBILE 600px
+   RESPONSIVE - MOBILE 600px
    ============================================================ */
 @media (max-width: 600px) {
   /* Why grid */
@@ -1438,7 +1438,7 @@ body:has(.sticky-cta.visible) .lc-button {
   .lang-switcher { padding: 2px; }
   .lang-btn { padding: 3px 6px; font-size: 10px; }
   .dark-toggle { font-size: 15px; padding: 4px; }
-  /* шапка не влезала в 390px: «Войти» дублируется в бургере, тема — системная */
+  /* шапка не влезала в 390px: «Войти» дублируется в бургере, тема - системная */
   .nav-cta .btn-ghost, .nav-right .dark-toggle { display: none; }
   .nav-inner { gap: 6px; }
   .nav-right { margin-left: auto; gap: 6px; }
@@ -1625,7 +1625,7 @@ body:has(.sticky-cta.visible) .lc-button {
 .rv-plan li { display: flex; gap: 8px; }
 .rv-plan li::before { content: "✓"; color: #16a34a; font-weight: 800; }
 .rv-plan li.no { color: var(--text-muted); }
-.rv-plan li.no::before { content: "—"; color: #9ca3af; }
+.rv-plan li.no::before { content: "-"; color: #9ca3af; }
 .rv-plan .rv-cta { margin-top: auto; }
 .rv-plan .rv-cta a { display: block; text-align: center; }
 .rv-plan .rv-cta-note { font-size: 12.5px; color: var(--text-muted); margin-top: 8px; text-align: center; }

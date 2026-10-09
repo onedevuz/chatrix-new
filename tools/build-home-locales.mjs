@@ -5,7 +5,7 @@
 //
 // Run from repo root after any change to index.html or main.js translations:
 //   node tools/build-home-locales.mjs
-// Do not edit uz/index.html and en/index.html by hand — they are overwritten.
+// Do not edit uz/index.html and en/index.html by hand - they are overwritten.
 // Deploy: rsync must exclude tools/ (not needed on the server).
 
 import fs from 'node:fs';
@@ -21,17 +21,17 @@ const SITE = 'https://prochat.uz';
 const META = {
   uz: {
     url: `${SITE}/uz/`,
-    title: "Sayt uchun onlayn chat — Prochat · O'zbekiston",
-    desc: "Prochat — O'zbekistondagi saytlar uchun onlayn chat: o'zbek va rus tillarida, Telegram bitta oynada, AI-yordamchi 24/7. Bepul tarif, 5 daqiqada o'rnatish.",
-    ogTitle: "Prochat — sayt uchun onlayn chat · O'zbekiston",
+    title: "Sayt uchun onlayn chat - Prochat · O'zbekiston",
+    desc: "Prochat - O'zbekistondagi saytlar uchun onlayn chat: o'zbek va rus tillarida, Telegram bitta oynada, AI-yordamchi 24/7. Bepul tarif, 5 daqiqada o'rnatish.",
+    ogTitle: "Prochat - sayt uchun onlayn chat · O'zbekiston",
     ogDesc: "O'zbek tilini to'liq qo'llab-quvvatlaydigan onlayn chat. Telegram, analitika, white-label. 5 daqiqada o'rnatish. Bepul tarif.",
     locale: 'uz_UZ',
   },
   en: {
     url: `${SITE}/en/`,
-    title: 'Live Chat for Websites in Uzbekistan — Prochat',
+    title: 'Live Chat for Websites in Uzbekistan - Prochat',
     desc: 'Prochat is a live chat for websites in Uzbekistan: Uzbek and Russian support, Telegram in one inbox, AI assistant 24/7. Free plan, set up in 5 minutes.',
-    ogTitle: 'Prochat — Live Chat for Websites · Uzbekistan',
+    ogTitle: 'Prochat - Live Chat for Websites · Uzbekistan',
     ogDesc: 'Live chat with full Uzbek language support. Telegram, analytics, white-label. Set up in 5 minutes. Free plan.',
     locale: 'en_US',
   },
