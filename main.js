@@ -1,6 +1,51 @@
 // ===== i18n TRANSLATIONS =====
 const translations = {
   ru: {
+    // главная, сверка с кодом (2026-10)
+    hb_eyebrow: "Установка за 5 минут — без программиста",
+    hb_help: "Поможем подключить бесплатно — напишите в чат",
+    ft_title: "Всё общение с клиентами — в одном окне",
+    cab_bar: "app.prochat.uz — Диалоги",
+    cab_night: "Гость · 23:40",
+    cab_night_m: "Вы работаете в субботу?",
+    cab_ai: "ответил ИИ-ассистент",
+    cab_qr: "Быстрые ответы",
+    cab_vis: "Посетитель",
+    cab_page: "Страница",
+    cab_src: "Источник",
+    cab_city: "Город",
+    cab_visits: "Визит",
+    cab_dev: "Устройство",
+    cab_dev_v: "Телефон",
+    cab_visits_v: "3-й",
+    f_ai_t: "ИИ-ассистент",
+    f_ai_s: "Отвечает по вашей базе знаний, сложное передаёт оператору",
+    f_ai_plan: "Start и Business",
+    f_chat_t: "Живой чат",
+    f_chat_s: "Переписка в реальном времени, файлы и фото",
+    f_vis_t: "Кто на сайте",
+    f_vis_s: "Страница, источник, город и устройство посетителя",
+    f_trg_t: "Триггер-сообщения",
+    f_trg_s: "Пишут первыми: по странице, времени на сайте, источнику",
+    f_qr_t: "Быстрые ответы",
+    f_qr_s: "Готовые шаблоны по команде «/»",
+    f_rep_t: "Отчёты",
+    f_rep_s: "Время ответа, число диалогов и оценки клиентов",
+    how_s2: "Вставьте код на сайт — Tilda, WordPress или любой другой.",
+    how_s3: "Отвечайте из браузера на компьютере или телефоне.",
+    pr_fr3b: "Триггеры и быстрые ответы",
+    pr_start_cta2: "Выбрать Start",
+    onprem_short: "Нужно на своих серверах? Развернём Prochat у вас — данные клиентов останутся внутри компании.",
+    fq_ai_q: "Как работает ИИ-ассистент?",
+    fq_ai_a: "Загрузите в базу знаний свои тексты, файлы или ссылки — ассистент отвечает посетителям по ним, а сложные вопросы передаёт оператору. Доступен на тарифах Start и Business.",
+    fq_ref_a: "В течение 30 дней после первой оплаты платного тарифа вернём деньги по запросу. Условия — в публичной оферте.",
+    fq_style_a: "Да: цвета, положение и вид кнопки, логотип, тексты приветствия. На Start и Business — без логотипа Prochat.",
+    fq_uz_a: "Да. Клиент пишет на узбекском или русском — оператор и ИИ-ассистент отвечают на его языке. Наша команда тоже отвечает на обоих языках.",
+    pp_title: "Начните бесплатно",
+    pp_sub: "Тариф Free без срока: 1 оператор, 1 сайт, 50 диалогов в месяц.",
+    pp_cta: "Создать аккаунт →",
+    pp_note: "Без карты",
+
     // вариант B главной (2026-10)
     hb_offer: "Бесплатный тариф без срока: 1 оператор, 50 диалогов в месяц · Start — 10 дней бесплатно",
     hb_title: "Онлайн-чат для сайта с ответами <span class=\"gradient-text\">из Telegram</span>",
@@ -252,6 +297,51 @@ const translations = {
   },
 
   uz: {
+    // главная, сверка с кодом (2026-10)
+    hb_eyebrow: "5 daqiqada o‘rnatish — dasturchisiz",
+    hb_help: "Ulashga bepul yordam beramiz — chatga yozing",
+    ft_title: "Mijozlar bilan barcha muloqot — bitta oynada",
+    cab_bar: "app.prochat.uz — Dialoglar",
+    cab_night: "Mehmon · 23:40",
+    cab_night_m: "Shanba kuni ishlaysizlarmi?",
+    cab_ai: "AI-yordamchi javob berdi",
+    cab_qr: "Tezkor javoblar",
+    cab_vis: "Tashrif buyuruvchi",
+    cab_page: "Sahifa",
+    cab_src: "Manba",
+    cab_city: "Shahar",
+    cab_visits: "Tashrif",
+    cab_dev: "Qurilma",
+    cab_dev_v: "Telefon",
+    cab_visits_v: "3-chi",
+    f_ai_t: "AI-yordamchi",
+    f_ai_s: "Bilimlar bazangiz bo‘yicha javob beradi, murakkabini operatorga uzatadi",
+    f_ai_plan: "Start va Business",
+    f_chat_t: "Jonli chat",
+    f_chat_s: "Real vaqtda yozishma, fayllar va rasmlar",
+    f_vis_t: "Saytda kim bor",
+    f_vis_s: "Tashrif buyuruvchining sahifasi, manbasi, shahri va qurilmasi",
+    f_trg_t: "Trigger-xabarlar",
+    f_trg_s: "Birinchi bo‘lib yozadi: sahifa, saytdagi vaqt va manba bo‘yicha",
+    f_qr_t: "Tezkor javoblar",
+    f_qr_s: "«/» buyrug‘i bilan tayyor shablonlar",
+    f_rep_t: "Hisobotlar",
+    f_rep_s: "Javob vaqti, dialoglar soni va mijozlar baholari",
+    how_s2: "Kodni saytga qo‘ying — Tilda, WordPress yoki boshqa istalgan sayt.",
+    how_s3: "Kompyuter yoki telefondagi brauzerdan javob bering.",
+    pr_fr3b: "Triggerlar va tezkor javoblar",
+    pr_start_cta2: "Start tanlash",
+    onprem_short: "O‘z serverlaringizda kerakmi? Prochatni sizda o‘rnatamiz — mijozlar ma’lumotlari kompaniya ichida qoladi.",
+    fq_ai_q: "AI-yordamchi qanday ishlaydi?",
+    fq_ai_a: "Bilimlar bazasiga matnlar, fayllar yoki havolalarni yuklang — yordamchi tashrif buyuruvchilarga ular asosida javob beradi, murakkab savollarni operatorga uzatadi. Start va Business tariflarida mavjud.",
+    fq_ref_a: "Pullik tarifga birinchi to‘lovdan keyin 30 kun ichida so‘rov bo‘yicha pulni qaytaramiz. Shartlar — ommaviy ofertada.",
+    fq_style_a: "Ha: ranglar, tugmaning joyi va ko‘rinishi, logotip, salomlashuv matnlari. Start va Business tariflarida — Prochat logotipisiz.",
+    fq_uz_a: "Ha. Mijoz o‘zbek yoki rus tilida yozadi — operator va AI-yordamchi uning tilida javob beradi. Jamoamiz ham ikkala tilda javob beradi.",
+    pp_title: "Bepul boshlang",
+    pp_sub: "Free tarifi muddatsiz: 1 operator, 1 sayt, oyiga 50 ta dialog.",
+    pp_cta: "Akkaunt yaratish →",
+    pp_note: "Kartasiz",
+
     // вариант B главной (2026-10)
     hb_offer: "Muddatsiz bepul tarif: 1 operator, oyiga 50 ta dialog · Start — 10 kun bepul",
     hb_title: "Sayt uchun onlayn-chat — <span class=\"gradient-text\">Telegramdan</span> javob bering",
@@ -503,6 +593,51 @@ const translations = {
   },
 
   en: {
+    // главная, сверка с кодом (2026-10)
+    hb_eyebrow: "Set up in 5 minutes — no developer needed",
+    hb_help: "We help you connect for free — just ask in the chat",
+    ft_title: "All customer conversations in one window",
+    cab_bar: "app.prochat.uz — Conversations",
+    cab_night: "Guest · 23:40",
+    cab_night_m: "Are you open on Saturday?",
+    cab_ai: "answered by AI assistant",
+    cab_qr: "Quick replies",
+    cab_vis: "Visitor",
+    cab_page: "Page",
+    cab_src: "Source",
+    cab_city: "City",
+    cab_visits: "Visit",
+    cab_dev: "Device",
+    cab_dev_v: "Phone",
+    cab_visits_v: "3rd",
+    f_ai_t: "AI assistant",
+    f_ai_s: "Answers from your knowledge base, hands hard questions to an operator",
+    f_ai_plan: "Start and Business",
+    f_chat_t: "Live chat",
+    f_chat_s: "Real-time messaging, files and photos",
+    f_vis_t: "Who is on your site",
+    f_vis_s: "Visitor’s page, source, city and device",
+    f_trg_t: "Proactive messages",
+    f_trg_s: "Start the chat by page, time on site or source",
+    f_qr_t: "Quick replies",
+    f_qr_s: "Saved templates with the “/” command",
+    f_rep_t: "Reports",
+    f_rep_s: "Response time, chat volume and customer ratings",
+    how_s2: "Paste the code on your site — Tilda, WordPress or any other.",
+    how_s3: "Reply from the browser on your computer or phone.",
+    pr_fr3b: "Proactive messages and quick replies",
+    pr_start_cta2: "Choose Start",
+    onprem_short: "Need it on your own servers? We deploy Prochat for you — customer data stays inside your company.",
+    fq_ai_q: "How does the AI assistant work?",
+    fq_ai_a: "Upload your texts, files or links to the knowledge base — the assistant answers visitors from them and hands hard questions to an operator. Available on Start and Business.",
+    fq_ref_a: "Within 30 days of your first payment for a paid plan we refund on request. Terms are in the public offer.",
+    fq_style_a: "Yes: colours, button position and style, logo, greeting texts. On Start and Business — without the Prochat logo.",
+    fq_uz_a: "Yes. A customer writes in Uzbek or Russian — the operator and the AI assistant reply in their language. Our team answers in both languages too.",
+    pp_title: "Start for free",
+    pp_sub: "Free plan with no time limit: 1 operator, 1 site, 50 chats a month.",
+    pp_cta: "Create account →",
+    pp_note: "No card",
+
     // вариант B главной (2026-10)
     hb_offer: "Free plan with no time limit: 1 operator, 50 chats a month · Start — 10 days free",
     hb_title: "Live chat for your website, <span class=\"gradient-text\">answered from Telegram</span>",
@@ -800,6 +935,7 @@ else if (savedLang && translations[savedLang]) applyLang(savedLang);
 
 // ===== ROI CALCULATOR =====
 function calcROI() {
+  if (!document.getElementById('visitors')) return; // секция калькулятора убрана с главной (2026-10)
   const visitors = parseInt(document.getElementById('visitors').value);
   const order = parseInt(document.getElementById('order-val-input').value);
   const conv = parseFloat(document.getElementById('conv').value);
@@ -829,14 +965,16 @@ if (burger && navLinks) {
 
 // ===== DARK MODE =====
 const darkToggle = document.getElementById('darkToggle');
+const MOON_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+const SUN_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';
 const savedTheme = localStorage.getItem('prochat_theme');
 if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
 if (darkToggle) {
-  darkToggle.textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+  darkToggle.innerHTML = document.documentElement.getAttribute('data-theme') === 'dark' ? SUN_SVG : MOON_SVG;
   darkToggle.addEventListener('click', () => {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
-    darkToggle.textContent = isDark ? '🌙' : '☀️';
+    darkToggle.innerHTML = isDark ? MOON_SVG : SUN_SVG;
     localStorage.setItem('prochat_theme', isDark ? 'light' : 'dark');
   });
 }

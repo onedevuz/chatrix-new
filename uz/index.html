@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/style.css?v=20261009" />
+  <link rel="stylesheet" href="/style.css?v=20261009b" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -97,7 +97,6 @@
       <li><a href="#features" data-i18n="nav_features">Imkoniyatlar</a></li>
       <li><a href="#how" data-i18n="nav_how">Qanday ishlaydi</a></li>
       <li><a href="#pricing" data-i18n="nav_pricing">Narxlar</a></li>
-      <li><a href="#integrations" data-i18n="nav_integrations">Integratsiyalar</a></li>
       <li><a href="/help/" data-i18n="nav_help">Yordam</a></li>
       <li class="mobile-only-login"><a href="https://app.prochat.uz/login" data-i18n="nav_login">Kirish</a></li>
     </ul>
@@ -110,7 +109,7 @@
       <div class="nav-cta">
         <a href="https://app.prochat.uz/login" class="btn-ghost" data-i18n="nav_login">Kirish</a>
         <a href="/register" class="btn-primary" data-i18n="nav_start">Bepul sinab ko'ring</a>
-        <button class="dark-toggle" id="darkToggle" aria-label="Dark mode">🌙</button>
+        <button class="dark-toggle" id="darkToggle" aria-label="Dark mode"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
       </div>
     </div>
     <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
@@ -120,20 +119,20 @@
 <!-- HERO (вариант B, 2026-10) -->
 <section class="rv-hero-b">
   <div class="container">
-    <div class="rv-eyebrow"><span class="rv-dot"></span><span data-i18n="hb_offer">Muddatsiz bepul tarif: 1 operator, oyiga 50 ta dialog · Start — 10 kun bepul</span></div>
+    <div class="rv-eyebrow"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span data-i18n="hb_eyebrow">5 daqiqada o‘rnatish — dasturchisiz</span></div>
     <h1 data-i18n="hb_title">Sayt uchun onlayn-chat — <span class="gradient-text">Telegramdan</span> javob bering</h1>
     <p class="rv-sub" data-i18n="hb_sub">Mijoz saytda o‘zbek yoki rus tilida yozadi — xabar darhol Telegramingizga keladi. Telefondan javob berasiz, mijoz javobni saytda ko‘radi. Tunda AI-yordamchi javob beradi.</p>
     <div class="rv-ctas">
       <a href="/register" class="btn-primary btn-lg" data-i18n="hb_cta">Bepul ulash →</a>
       <button type="button" class="rv-btn-ask" data-open-chat><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="hb_ask">Chatda savol berish</span></button>
     </div>
-    <p class="rv-price-chip" data-i18n="hb_note">Telegram va AI-yordamchi — Start tarifida, oyiga 149 000 so‘m. Yoqmasa — 30 kun ichida pulni qaytaramiz.</p>
+    <p class="rv-price-chip" data-i18n="hb_help">Ulashga bepul yordam beramiz — chatga yozing</p>
     <div class="rv-flow">
       <div class="rv-step">
         <div class="rv-step-cap" data-i18n="hb_s1_cap">1 · Saytda</div><h3 data-i18n="hb_s1_h">Mijoz savol beradi</h3>
         <div class="rv-screen site" aria-hidden="true">
           <div class="rv-bub v">Salom! Yetkazib berish bormi?<small>mebel-shop.uz · 14:02</small></div>
-          <div class="rv-bub a">Ha, Toshkent bo‘ylab 1 kunda 🚚<small>14:03</small></div>
+          <div class="rv-bub a">Ha, Toshkent bo‘ylab 1 kunda<small>14:03</small></div>
         </div>
         <p data-i18n="hb_s1_p">Chat istalgan sahifada, tashrif buyuruvchi tilida ochiladi.</p>
       </div>
@@ -142,8 +141,8 @@
         <div class="rv-step-cap" data-i18n="hb_s2_cap">2 · Telegramda</div><h3 data-i18n="hb_s2_h">Telefondan javob berasiz</h3>
         <div class="rv-screen tg" aria-hidden="true">
           <div class="rv-tg-top"><span class="rv-tg-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.9 4.3L18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1-1 .2-1.5L20.6 2.8c.9-.3 1.6.2 1.3 1.5z"/></svg></span>Prochat bot</div>
-          <div class="rv-bub bot">🔔 mebel-shop.uz: «Salom! Yetkazib berish bormi?»</div>
-          <div class="rv-bub me">Ha, Toshkent bo‘ylab 1 kunda 🚚<small>14:03 ✓✓</small></div>
+          <div class="rv-bub bot"><svg class="ic-inline" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg> mebel-shop.uz: «Salom! Yetkazib berish bormi?»</div>
+          <div class="rv-bub me">Ha, Toshkent bo‘ylab 1 kunda<small>14:03 ✓✓</small></div>
         </div>
         <p data-i18n="hb_s2_p">Bildirishnoma Telegramga keladi — javob mijozga saytda yetib boradi.</p>
       </div>
@@ -160,193 +159,42 @@
   </div>
 </section>
 
-<!-- FEATURES -->
+<!-- FEATURES (2026-10, сверено с кодом платформы) -->
 <section class="features" id="features">
   <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="features_title">Hamma narsa — bir joyda</h2>
-      <p data-i18n="features_sub">10 ta servisdan yig'maslik kerak. Prochat hammasini o'zi qiladi.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card featured">
-        <div class="feature-icon">📲</div>
-        <h3 data-i18n="feat1_title">AI-avtopilot</h3>
-        <p data-i18n="feat1_sub">Standart savollarga 24/7 javob beradi. Ma'lumotlaringizda o'qiydi. Kerak bo'lsa operatorga uzatadi.</p>
-        <div class="feature-tag" data-i18n="feat_popular">Mashhur</div>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">💬</div>
-        <h3 data-i18n="feat2_title">Jonli chat</h3>
-        <p data-i18n="feat2_sub">Mijozlar bilan real vaqtda muloqot. Brauzerda to'g'ridan-to'g'ri ishlaydi.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📊</div>
-        <h3 data-i18n="feat3_title">Tahlil</h3>
-        <p data-i18n="feat3_sub">Kim saytda, qayerdan keldi, nima ko'rmoqda. Harakatlarga qarab triggerlar.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔀</div>
-        <h3 data-i18n="feat4_title">Yo'naltirish</h3>
-        <p data-i18n="feat4_sub">Chatlarni bo'limlar o'rtasida avtomatik taqsimlaydi. Navbatlar va ustuvorliklar.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📱</div>
-        <h3 data-i18n="feat5_title">Telegram + sayt</h3>
-        <p data-i18n="feat5_sub">Saytdagi chat va Telegram-bot — bitta operator oynasida. WhatsApp va Instagram yo'l xaritasida.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3 data-i18n="feat6_title">Tez javoblar</h3>
-        <p data-i18n="feat6_sub">Shablonlar bazasi. Operator interfeysida AI maslahatlar.</p>
-      </div>
-      <div class="feature-card" style="grid-column: span 3; background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border-color: #bbf7d0;">
-        <div style="display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
-          <div class="feature-icon" style="font-size:40px; flex-shrink:0;">🌐</div>
-          <div>
-            <h3 data-i18n="feat7_title">Real vaqtda avtomatik tarjima</h3>
-            <p data-i18n="feat7_sub">Mijoz inglizcha yozadi — operator ruscha ko'radi. Operator ruscha javob beradi — mijoz inglizcha oladi. 50+ til, almashtirishsiz.</p>
-          </div>
-          <div class="translate-demo-pill">
-            <span class="translate-pill-item">EN</span>
-            <span class="translate-pill-arrow">→</span>
-            <span class="translate-pill-item active">RU</span>
-            <span class="translate-pill-arrow">→</span>
-            <span class="translate-pill-item">EN</span>
-          </div>
+    <div class="section-header"><h2 data-i18n="ft_title">Mijozlar bilan barcha muloqot — bitta oynada</h2></div>
+    <div class="cab" aria-hidden="true">
+      <div class="cab-bar"><i></i><i></i><i></i><span data-i18n="cab_bar">app.prochat.uz — Dialoglar</span></div>
+      <div class="cab-body">
+        <div class="cab-list">
+          <div class="cab-li on"><div class="cab-av" style="background:#6366f1">A</div><div><b>Aziz</b><em>Zo‘r, ertaga olib kelasizlarmi?</em></div></div>
+          <div class="cab-li"><div class="cab-av" style="background:#0ea5e9">Д</div><div><b>Дилноза</b><em>Доставка в Самарканд есть?</em></div></div>
+          <div class="cab-li"><div class="cab-av" style="background:#64748b">G</div><div><b data-i18n="cab_night">Mehmon · 23:40</b><em data-i18n="cab_night_m">Shanba kuni ishlaysizlarmi?</em><span class="cab-tag" data-i18n="cab_ai">AI-yordamchi javob berdi</span></div></div>
         </div>
-      </div>
-
-      <!-- AI ASSISTANT — added 2026-05-21 -->
-      <div class="feature-card" style="grid-column: span 3; background: linear-gradient(135deg, #faf5ff, #f3e8ff); border-color: #c4b5fd;">
-        <div style="display:flex; align-items:flex-start; gap:20px; flex-wrap:wrap;">
-          <div class="feature-icon" style="font-size:40px; flex-shrink:0;">🤖</div>
-          <div style="flex:1; min-width: 260px;">
-            <h3 data-i18n="feat_ai_title">AI-maslahatchi — 5 soniyada javob beradi</h3>
-            <p data-i18n="feat_ai_sub">FAQ'ingizni yuklang — bot tashrif buyuruvchilarga oddiy savollarga darhol javob beradi. Murakkab holatlarni operatorga uzatadi. Operatorlaringiz javoblarida o'qiydi. Rus, o'zbek, ingliz va boshqa har qanday tilda ishlaydi.</p>
-            <ul style="margin-top:12px; display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:8px 24px; list-style:none; padding:0; color: #4c1d95;">
-              <li>✓ <span data-i18n="feat_ai_bullet_speed">Soatlar o'rniga 2-5 soniyada javob</span></li>
-              <li>✓ <span data-i18n="feat_ai_bullet_persite">Har bir sayt uchun o'z boti</span></li>
-              <li>✓ <span data-i18n="feat_ai_bullet_byok">O'z AI-kalitingiz → cheklovsiz</span></li>
-              <li>✓ <span data-i18n="feat_ai_bullet_escalate">Murakkab savollar — operatorga</span></li>
-            </ul>
-          </div>
+        <div class="cab-conv">
+          <div class="cab-msg in">Assalomu alaykum! 2 kishilik divan narxi qancha?<small>14:02</small></div>
+          <div class="cab-msg out">Va alaykum assalom! 4 200 000 so‘m, Toshkent bo‘ylab yetkazib berish bepul.<small>14:03</small></div>
+          <div class="cab-msg in">Zo‘r, ertaga olib kelasizlarmi?<small>14:05</small></div>
+          <div class="cab-qr"><div class="cab-qr-h"><svg class="ic" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg><span data-i18n="cab_qr">Tezkor javoblar</span></div><div><b>/dostavka</b> Ha, ertaga 10:00–18:00 oralig‘ida olib boramiz.</div><div><b>/oplata</b> Click yoki naqd pul.</div></div>
+          <div class="cab-input">/do<span class="cab-caret"></span></div>
+        </div>
+        <div class="cab-vis">
+          <div class="cab-vis-h" data-i18n="cab_vis">Tashrif buyuruvchi</div>
+          <div class="cab-row"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg><span><span data-i18n="cab_page">Sahifa</span></span><b>/divany</b></div>
+          <div class="cab-row"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span><span data-i18n="cab_src">Manba</span></span><b>instagram.com</b></div>
+          <div class="cab-row"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><span data-i18n="cab_city">Shahar</span></span><b>Toshkent</b></div>
+          <div class="cab-row"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg><span><span data-i18n="cab_dev">Qurilma</span></span><b data-i18n="cab_dev_v">Telefon</b></div>
+          <div class="cab-row"><svg class="ic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg><span><span data-i18n="cab_visits">Tashrif</span></span><b data-i18n="cab_visits_v">3-chi</b></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- USE CASES -->
-<section class="usecases" id="usecases">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="uc_title">Prochat kimlar uchun</h2>
-      <p data-i18n="uc_sub">Turli vazifalar — bitta yechim</p>
-    </div>
-    <div class="uc-tabs">
-      <button class="uc-tab active" data-tab="ecom" data-i18n="uc_tab_ecom">🛒 Internet-do'kon</button>
-      <button class="uc-tab" data-tab="support" data-i18n="uc_tab_support">🎧 Qo'llab-quvvatlash</button>
-      <button class="uc-tab" data-tab="sales" data-i18n="uc_tab_sales">📈 Savdo</button>
-    </div>
-    <div class="uc-panels">
-      <div class="uc-panel active" data-panel="ecom">
-        <div class="uc-content">
-          <div class="uc-text">
-            <h3 data-i18n="uc_ecom_title">Operator yollamasdan savdoni oshiring</h3>
-            <ul class="uc-list">
-              <li data-i18n="uc_ecom_1">✓ Operator mavjudlik, yetkazib berish va to'lov haqidagi savollarga javob beradi</li>
-              <li data-i18n="uc_ecom_2">✓ Tashlab ketilgan savat uchun trigger-xabarlar</li>
-              <li data-i18n="uc_ecom_3">✓ CRM va buyurtmalar tizimi bilan integratsiya</li>
-              <li data-i18n="uc_ecom_4">✓ Konversiya o'rtacha +18% oshadi</li>
-            </ul>
-            <a href="/register" class="btn-primary" data-i18n="uc_cta">Bepul boshlash →</a>
-          </div>
-          <div class="uc-metric-card">
-            <div class="uc-metric"><span class="uc-num">+18%</span><span data-i18n="uc_metric_conv">konversiya</span></div>
-            <div class="uc-metric"><span class="uc-num">−65%</span><span data-i18n="uc_metric_abandon">tashlab ketilgan savatlar</span></div>
-            <div class="uc-metric"><span class="uc-num">4 мин</span><span data-i18n="uc_metric_response">o'rtacha javob vaqti</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="uc-panel" data-panel="support">
-        <div class="uc-content">
-          <div class="uc-text">
-            <h3 data-i18n="uc_support_title">Qo'llab-quvvatlash xizmatiga yukni kamaytiring</h3>
-            <ul class="uc-list">
-              <li data-i18n="uc_support_1">✓ Tezkor javoblar va shablonlar odatiy murojaatlarni soniyalarda yopadi</li>
-              <li data-i18n="uc_support_2">✓ Tezkor tugmalar bilan ichki javoblar bazasi</li>
-              <li data-i18n="uc_support_3">✓ Ko'p kanal: chat va Telegram bitta oynada</li>
-              <li data-i18n="uc_support_4">✓ SLA nazorati va operatorlar bo'yicha hisobotlar</li>
-            </ul>
-            <a href="/register" class="btn-primary" data-i18n="uc_cta">Bepul boshlash →</a>
-          </div>
-          <div class="uc-metric-card">
-            <div class="uc-metric"><span class="uc-num">×3</span><span data-i18n="uc_metric_speed">tezroq javob</span></div>
-            <div class="uc-metric"><span class="uc-num">−40%</span><span data-i18n="uc_metric_cost">qo'llab-quvvatlash xarajati</span></div>
-            <div class="uc-metric"><span class="uc-num">1 окно</span><span data-i18n="uc_metric_single">barcha kanallar</span></div>
-          </div>
-        </div>
-      </div>
-      <div class="uc-panel" data-panel="sales">
-        <div class="uc-content">
-          <div class="uc-text">
-            <h3 data-i18n="uc_sales_title">Siz uxlayotganda lidlarni saralang</h3>
-            <ul class="uc-list">
-              <li data-i18n="uc_sales_1">✓ Kontaktlarni avtomatik yig'ish</li>
-              <li data-i18n="uc_sales_2">✓ Lidlarni sizning mezonlaringiz bo'yicha saralash</li>
-              <li data-i18n="uc_sales_3">✓ Issiq lid paydo bo'lganda push-bildirishnoma</li>
-              <li data-i18n="uc_sales_4">✓ Bir bosishda CRM'ga uzatish</li>
-            </ul>
-            <a href="/register" class="btn-primary" data-i18n="uc_cta">Bepul boshlash →</a>
-          </div>
-          <div class="uc-metric-card">
-            <div class="uc-metric"><span class="uc-num">+25%</span><span data-i18n="uc_metric_leads">oyiga lidlar</span></div>
-            <div class="uc-metric"><span class="uc-num">×2.3</span><span data-i18n="uc_metric_qual">saralash</span></div>
-            <div class="uc-metric"><span class="uc-num">−30%</span><span data-i18n="uc_metric_cycle">bitim davri</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROI CALCULATOR -->
-<section class="roi-section" id="roi">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="roi_title">Chat bo'lmasa qancha yo'qotasiz?</h2>
-      <p data-i18n="roi_sub">Ma'lumotlarni kiriting va yo'qolgan daromadni bilib oling</p>
-    </div>
-    <div class="roi-card">
-      <div class="roi-inputs">
-        <div class="roi-field">
-          <label data-i18n="roi_visitors_label">Oylik sayt tashrif buyuruvchilari</label>
-          <div class="roi-slider-row">
-            <input type="range" id="visitors" min="500" max="100000" step="500" value="10000" />
-            <span class="roi-val" id="visitors-val">10 000</span>
-          </div>
-        </div>
-        <div class="roi-field">
-          <label data-i18n="roi_order_label">O'rtacha buyurtma (USD)</label>
-          <div class="roi-slider-row">
-            <input type="range" id="order-val-input" min="10" max="2000" step="10" value="100" />
-            <span class="roi-val" id="order-display">100</span>
-          </div>
-        </div>
-        <div class="roi-field">
-          <label data-i18n="roi_conv_label">Joriy konversiya (%)</label>
-          <div class="roi-slider-row">
-            <input type="range" id="conv" min="0.5" max="10" step="0.5" value="2" />
-            <span class="roi-val" id="conv-val">2%</span>
-          </div>
-        </div>
-      </div>
-      <div class="roi-result">
-        <div class="roi-result-label" data-i18n="roi_result_label">Prochat bilan qo'shimcha daromad</div>
-        <div class="roi-result-amount" id="roi-amount">$3 600</div>
-        <div class="roi-result-sub" data-i18n="roi_result_sub">oyiga +18% konversiya o'sishi bilan</div>
-        <a href="/register" class="btn-primary" data-i18n="roi_cta">Ko'proq ishlashni boshlash →</a>
-      </div>
+    <div class="ft-grid">
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></div><div><h3><span data-i18n="f_ai_t">AI-yordamchi</span><span class="ft-plan" data-i18n="f_ai_plan">Start va Business</span></h3><p data-i18n="f_ai_s">Bilimlar bazangiz bo‘yicha javob beradi, murakkabini operatorga uzatadi</p></div></div>
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div><h3><span data-i18n="f_chat_t">Jonli chat</span></h3><p data-i18n="f_chat_s">Real vaqtda yozishma, fayllar va rasmlar</p></div></div>
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div><div><h3><span data-i18n="f_vis_t">Saytda kim bor</span></h3><p data-i18n="f_vis_s">Tashrif buyuruvchining sahifasi, manbasi, shahri va qurilmasi</p></div></div>
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><h3><span data-i18n="f_trg_t">Trigger-xabarlar</span></h3><p data-i18n="f_trg_s">Birinchi bo‘lib yozadi: sahifa, saytdagi vaqt va manba bo‘yicha</p></div></div>
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 17 4 12 9 7"/><path d="M20 18v-2a4 4 0 0 0-4-4H4"/></svg></div><div><h3><span data-i18n="f_qr_t">Tezkor javoblar</span></h3><p data-i18n="f_qr_s">«/» buyrug‘i bilan tayyor shablonlar</p></div></div>
+      <div class="ft-card"><div class="ft-ic"><svg class="ic" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg></div><div><h3><span data-i18n="f_rep_t">Hisobotlar</span></h3><p data-i18n="f_rep_s">Javob vaqti, dialoglar soni va mijozlar baholari</p></div></div>
     </div>
   </div>
 </section>
@@ -368,13 +216,13 @@
       <div class="step">
         <div class="step-num">02</div>
         <h3 data-i18n="step2_title">Vidjetni o'rnating</h3>
-        <p data-i18n="step2_sub">Saytingizga 2 qator kod nusxalang.</p>
+        <p data-i18n="how_s2">Kodni saytga qo‘ying — Tilda, WordPress yoki boshqa istalgan sayt.</p>
       </div>
       <div class="step-arrow">→</div>
       <div class="step">
         <div class="step-num">03</div>
         <h3 data-i18n="step3_title">Muloqot qiling</h3>
-        <p data-i18n="step3_sub">Chatlarni to'g'ridan-to'g'ri brauzerda qabul qiling — kompyuter yoki telefon.</p>
+        <p data-i18n="how_s3">Kompyuter yoki telefondagi brauzerdan javob bering.</p>
       </div>
     </div>
     <div class="code-block">
@@ -394,325 +242,6 @@
   </div>
 </section>
 
-<!-- DEMO -->
-<section class="demo-section" id="demo">
-  <div class="container">
-    <div class="section-header light">
-      <h2 data-i18n="demo_title">Qanday ishlashini ko'ring</h2>
-      <p data-i18n="demo_sub">Operator interfeysi to'g'ridan-to'g'ri brauzerda</p>
-    </div>
-
-    <!-- Tab switcher -->
-    <div class="demo-tabs">
-      <button class="demo-tab active" data-tab="split">🖥️ Полный вид</button>
-      <button class="demo-tab" data-tab="visitor">👤 Вид посетителя</button>
-      <button class="demo-tab" data-tab="operator">🎧 Вид оператора</button>
-    </div>
-
-    <div class="demo-split" id="demoSplit">
-
-      <!-- VISITOR SIDE -->
-      <div class="demo-visitor-side">
-        <div class="demo-side-label">👤 Посетитель вашего сайта</div>
-
-        <!-- Customization toolbar -->
-        <div class="demo-customize-bar">
-          <span class="demo-customize-label">✏️ Настройте виджет:</span>
-          <div class="demo-color-swatches">
-            <button class="demo-swatch active" data-color="#6366f1" style="background:#6366f1" title="Фиолетовый" onclick="setWidgetColor(this)"></button>
-            <button class="demo-swatch" data-color="#0ea5e9" style="background:#0ea5e9" title="Синий" onclick="setWidgetColor(this)"></button>
-            <button class="demo-swatch" data-color="#10b981" style="background:#10b981" title="Зелёный" onclick="setWidgetColor(this)"></button>
-            <button class="demo-swatch" data-color="#f59e0b" style="background:#f59e0b" title="Оранжевый" onclick="setWidgetColor(this)"></button>
-            <button class="demo-swatch" data-color="#ef4444" style="background:#ef4444" title="Красный" onclick="setWidgetColor(this)"></button>
-            <button class="demo-swatch" data-color="#111827" style="background:#111827" title="Тёмный" onclick="setWidgetColor(this)"></button>
-          </div>
-          <div class="demo-customize-pills">
-            <span class="demo-cpill">🖼️ Иконка</span>
-            <span class="demo-cpill">📍 Позиция</span>
-            <span class="demo-cpill">💬 Текст</span>
-          </div>
-        </div>
-
-        <div class="visitor-widget" id="visitorWidget">
-          <div class="vw-header" id="vwHeader">
-            <div class="vw-avatar" id="vwAvatar">P</div>
-            <div class="vw-info">
-              <strong id="vwName">Prochat</strong>
-              <span class="vw-online"><span class="online-dot"></span> Онлайн</span>
-            </div>
-            <button class="vw-close" onclick="this.closest('.visitor-widget').style.display='none'">×</button>
-          </div>
-          <div class="vw-messages" id="vwMessages">
-            <div class="vw-msg vw-msg-in">
-              <div class="vw-bubble">Привет! Чем могу помочь? 👋</div>
-              <div class="vw-time">сейчас</div>
-            </div>
-          </div>
-          <div class="vw-chips" id="vwChips">
-            <button class="vw-chip" onclick="sendChip(this)">Сколько стоит?</button>
-            <button class="vw-chip" onclick="sendChip(this)">Есть бесплатный план?</button>
-            <button class="vw-chip" onclick="sendChip(this)">Как установить?</button>
-            <button class="vw-chip" onclick="sendChip(this)">Есть Telegram?</button>
-          </div>
-          <div class="vw-input-row">
-            <input type="text" id="visitorInput" placeholder="Написать сообщение..." onkeydown="if(event.key==='Enter')sendVisitor()" />
-            <button onclick="sendVisitor()" class="vw-send" id="vwSendBtn">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22 2L11 13" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="white" stroke-width="2.5" stroke-linejoin="round"/></svg>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- OPERATOR SIDE -->
-      <div class="demo-operator-side">
-        <div class="demo-side-label">🎧 Панель оператора</div>
-
-        <!-- Operator customization bar -->
-        <div class="demo-customize-bar">
-          <span class="demo-customize-label">✏️ Настройте панель:</span>
-          <div class="demo-customize-pills">
-            <button class="demo-cpill demo-cpill-btn" onclick="toggleOpTheme(this)">🌙 Тёмная тема</button>
-            <span class="demo-cpill">📐 Колонки</span>
-            <span class="demo-cpill">⌨️ Хоткеи</span>
-            <span class="demo-cpill">🔔 Уведомления</span>
-          </div>
-        </div>
-
-        <div class="demo-mockup-inner" id="demoMockupInner">
-          <div class="demo-sidebar">
-            <div class="demo-sidebar-header"><span>Чаты</span> <span class="badge" id="demoBadge">1</span></div>
-            <div class="demo-chat-item active" id="demoActiveChatItem">
-              <div class="demo-avatar">В</div>
-              <div class="demo-chat-info">
-                <strong>Вы (демо)</strong>
-                <span id="demoLastMsg">Написать вопрос →</span>
-              </div>
-              <div class="demo-time">сейчас</div>
-            </div>
-            <div class="demo-chat-item">
-              <div class="demo-avatar" style="background:#a78bfa">М</div>
-              <div class="demo-chat-info"><strong>Манучехр</strong><span>Спасибо, всё понял!</span></div>
-              <div class="demo-time">2 мин</div>
-            </div>
-            <div class="demo-chat-item">
-              <div class="demo-avatar" style="background:#34d399">З</div>
-              <div class="demo-chat-info"><strong>Зарина</strong><span>Как подключить Telegram?</span></div>
-              <div class="demo-time">5 мин</div>
-            </div>
-          </div>
-          <div class="demo-main">
-            <div class="demo-main-header">
-              <strong>Вы (демо)</strong>
-              <span class="online-dot"></span>
-              <span>На сайте · сейчас</span>
-              <div class="demo-translate-badge">⚡ Быстрые ответы</div>
-            </div>
-            <div class="demo-messages" id="opMessages">
-              <div class="dm dm-user">
-                <div class="dm-original" id="firstOpMsg">Напишите вопрос в виджете слева →</div>
-              </div>
-            </div>
-            <div class="demo-input-row">
-              <input type="text" placeholder="Ответить клиенту..." id="opInput" onkeydown="if(event.key==='Enter')sendOperator()" />
-              <button class="demo-send" onclick="sendOperator()">Отправить</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- INTEGRATIONS -->
-<section class="integrations" id="integrations">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="integr_title">Asboblaringiz bilan ishlaydi</h2>
-      <p data-i18n="integr_sub">Mashhur platformalarga bir necha klik bilan ulanadi</p>
-    </div>
-    <div class="integr-grid">
-
-      <!-- Telegram -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="12" fill="#26A5E4"/>
-            <path d="M5.14 11.9l3.89 1.45 1.5 4.82c.1.3.47.4.71.2l2.1-1.72a.5.5 0 01.6-.02l3.79 2.75c.27.2.65.05.72-.28l2.77-13.3c.08-.37-.28-.67-.63-.54L5.14 10.7c-.38.14-.38.68 0 .82z" fill="white"/>
-            <path d="M9.03 13.35l-.28 3.06c.16 0 .32-.07.44-.19l1.43-1.38 2.97 2.19" fill="#B0BEC5"/>
-          </svg>
-        </div>
-        <span>Telegram</span>
-      </div>
-
-      <!-- WhatsApp -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="12" fill="#25D366"/>
-            <path d="M17.47 6.51A7.1 7.1 0 0012 4.27a7.12 7.12 0 00-6.17 10.68L4.27 19.7l4.87-1.28A7.12 7.12 0 0012 19.15a7.12 7.12 0 007.12-7.13 7.1 7.1 0 00-1.65-4.51zm-5.47 10.96a5.9 5.9 0 01-3.01-.82l-.21-.13-2.2.58.59-2.14-.14-.22a5.92 5.92 0 015.97-9.12 5.92 5.92 0 010 11.85zm3.25-4.43c-.18-.09-1.06-.52-1.22-.58-.17-.06-.29-.09-.41.09-.12.17-.46.58-.57.7-.1.12-.21.13-.39.04a4.88 4.88 0 01-1.43-.88 5.37 5.37 0 01-.99-1.23c-.1-.18-.01-.28.08-.37.08-.08.18-.21.27-.31.09-.1.12-.18.18-.3.06-.12.03-.22-.02-.31-.04-.09-.41-1-.56-1.37-.15-.36-.3-.31-.41-.32h-.35c-.12 0-.31.04-.47.22-.16.17-.62.6-.62 1.47s.63 1.7.72 1.82c.09.12 1.24 1.9 3.01 2.66.42.18.75.29 1.01.37.42.13.81.11 1.11.07.34-.05 1.06-.43 1.2-.85.15-.42.15-.78.11-.85-.04-.08-.16-.12-.34-.21z" fill="white"/>
-          </svg>
-        </div>
-        <span>WhatsApp</span>
-      </div>
-
-      <!-- Instagram -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="ig" cx="30%" cy="107%" r="150%">
-                <stop offset="0%" stop-color="#fdf497"/>
-                <stop offset="5%" stop-color="#fdf497"/>
-                <stop offset="45%" stop-color="#fd5949"/>
-                <stop offset="60%" stop-color="#d6249f"/>
-                <stop offset="90%" stop-color="#285AEB"/>
-              </radialGradient>
-            </defs>
-            <rect width="24" height="24" rx="6" fill="url(#ig)"/>
-            <rect x="6.5" y="6.5" width="11" height="11" rx="3.5" stroke="white" stroke-width="1.5" fill="none"/>
-            <circle cx="12" cy="12" r="2.8" stroke="white" stroke-width="1.5" fill="none"/>
-            <circle cx="16.2" cy="7.8" r="0.8" fill="white"/>
-          </svg>
-        </div>
-        <span>Instagram</span>
-      </div>
-
-      <!-- Email -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#EA4335"/>
-            <path d="M5 8.5l7 4.5 7-4.5M5 7h14a1 1 0 011 1v8a1 1 0 01-1 1H5a1 1 0 01-1-1V8a1 1 0 011-1z" stroke="white" stroke-width="1.3" fill="none" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <span>Email</span>
-      </div>
-
-      <!-- Tilda -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#000"/>
-            <text x="12" y="16.5" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="white" text-anchor="middle">T̃</text>
-          </svg>
-        </div>
-        <span>Tilda</span>
-      </div>
-
-      <!-- WordPress -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="12" fill="#21759B"/>
-            <path d="M4.27 12a7.73 7.73 0 0013.04 5.58L11.1 10.1A7.72 7.72 0 004.27 12zm14.07-2.1c.3.74.48 1.56.48 2.43 0 2.24-.91 3.93-1.68 5.18L19.68 12a7.67 7.67 0 00-.6-2.88h-.74zm-5.74.06a3.8 3.8 0 01.08-2.06c.43-.07.82-.11 1.32-.11a7.73 7.73 0 00-5.98-2.86c-.04 0-.08 0-.12.01.95.02 2.72.89 4.7 5.02zm-4.37 8.8l2.44-7.1 2.5 6.86a7.72 7.72 0 01-4.94.24zM12 3a9 9 0 100 18A9 9 0 0012 3z" fill="white"/>
-          </svg>
-        </div>
-        <span>WordPress</span>
-      </div>
-
-      <!-- Shopify -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#96BF48"/>
-            <path d="M15.8 5.6s-.1-.1-.3-.1c-.1 0-1.9-.1-1.9-.1s-1.3-1.2-1.4-1.3c-.1-.1-.4-.1-.5 0l-.7 2.1s-1 .3-1 .3C9.2 6.8 9.1 6.9 9 7.1L7.5 18.3l8.8 1.7 3-1c0 0-3.3-12.8-3.3-13-.1-.2-.2-.4-.2-.4zm-3.5-.7l-.5 1.5c-.4.1-.8.3-1.3.4.3-1.3 1.1-1.8 1.8-1.9zm-.3-1c-1.3.1-2.6 1.3-3.1 3.3-.7.2-1.2.4-1.2.4L9.5 5c.1-.2.3-.2.5-.2.3.1.2.1.2.1s.5-1 1.2-1.2c.1.1.3.2.8.2z" fill="white"/>
-          </svg>
-        </div>
-        <span>Shopify</span>
-      </div>
-
-      <!-- Bitrix24 -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#E3001B"/>
-            <text x="12" y="16" font-family="Arial" font-size="7.5" font-weight="900" fill="white" text-anchor="middle">B24</text>
-          </svg>
-        </div>
-        <span>Bitrix24</span>
-      </div>
-
-      <!-- amoCRM -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#339DC8"/>
-            <text x="12" y="15.5" font-family="Arial" font-size="7" font-weight="900" fill="white" text-anchor="middle">amo</text>
-          </svg>
-        </div>
-        <span>AmoCRM</span>
-      </div>
-
-      <!-- Zapier -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#FF4A00"/>
-            <path d="M12.02 9.17L9.25 14.7H12v1.38H7.5v-.82l2.77-5.5H7.6V8.4h4.42v.77zm2.32 7.26c-.9 0-1.38-.52-1.38-1.3V8.4h1.42v6.6c0 .23.1.32.3.32.1 0 .2 0 .3-.03l.18 1.07c-.22.05-.5.07-.82.07z" fill="white"/>
-          </svg>
-        </div>
-        <span>Zapier</span>
-      </div>
-
-      <!-- Webhooks / API -->
-      <div class="integr-item">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#6366f1"/>
-            <path d="M7 9l-2 3 2 3M17 9l2 3-2 3M13 6l-2 12" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          </svg>
-        </div>
-        <span>API / Webhooks</span>
-      </div>
-
-      <!-- More -->
-      <div class="integr-item integr-more">
-        <div class="integr-icon">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#e0e7ff"/>
-            <text x="12" y="16" font-family="Arial" font-size="16" font-weight="900" fill="#6366f1" text-anchor="middle">+</text>
-          </svg>
-        </div>
-        <span data-i18n="integr_more">Va yana 50+</span>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- WHY PROCHAT -->
-<section class="why-section" id="why">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="why_title">Nima uchun Prochat tanlashadi</h2>
-      <p data-i18n="why_sub">O'zbekiston va MDH biznesi uchun yaratilgan</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">🇺🇿🇷🇺</div>
-        <h3 data-i18n="why1_title">Mijozning ona tili</h3>
-        <p data-i18n="why1_text">O'zbek tili uchun to'liq qo'llab-quvvatlashga ega yagona chat. AI UZ va RU tillarida javob beradi.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💬</div>
-        <h3 data-i18n="why2_title">Telegram + sayt bitta oynada</h3>
-        <p data-i18n="why2_text">Saytdan va Telegramdan barcha murojaatlar operatorning yagona interfeysida. Hech narsa yo'qolmaydi.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🤖</div>
-        <h3 data-i18n="why3_title">AI kecha va dam olish kunlari ishlaydi</h3>
-        <p data-i18n="why3_text">Avtopilot 24/7 odatdagi savollarga javob beradi. Ertalab operator tayyor leadlarni ko'radi.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">⚡</div>
-        <h3 data-i18n="why4_title">5 daqiqada tayyor</h3>
-        <p data-i18n="why4_text">Saytga bir qator kod — va chat ishlaydi. Integratorlar, dasturchilar va uzoq joriy etish kerak emas.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- PRICING + TRUST (вариант B, 2026-10) -->
 <section class="pricing rv-pricing" id="pricing">
   <div class="container">
@@ -725,7 +254,7 @@
         <h3>Free</h3><div class="rv-for" data-i18n="pr_free_for">O‘z saytingizda sinab ko‘rish</div>
         <div class="rv-price">0 <small data-i18n="pr_som">so‘m</small> <small data-i18n="pr_forever">muddatsiz</small></div>
         <div class="rv-day"></div>
-        <ul><li data-i18n="pr_fr1">1 operator, 1 sayt</li><li data-i18n="pr_fr2">Oyiga 50 ta dialog</li><li data-i18n="pr_fr3">RU / UZ / EN vidjet</li><li class="no" data-i18n="pr_fr4">Telegram va AI-yordamchi</li></ul>
+        <ul><li data-i18n="pr_fr1">1 operator, 1 sayt</li><li data-i18n="pr_fr2">Oyiga 50 ta dialog</li><li data-i18n="pr_fr3b">Triggerlar va tezkor javoblar</li><li class="no" data-i18n="pr_fr4">Telegram va AI-yordamchi</li></ul>
         <div class="rv-cta"><a href="/register" class="btn-outline" data-i18n="pr_free_cta">Bepul boshlash</a>
         </div>
       </div>
@@ -735,7 +264,7 @@
         <div class="rv-price">149 000 <small data-i18n="pr_som">so‘m</small><small data-i18n="pr_mo">/oy</small></div>
         <div class="rv-day" data-i18n="pr_start_day">kuniga ≈ 5 000 so‘m</div>
         <ul><li data-i18n="pr_st1">3 tagacha operator, 3 sayt</li><li data-i18n="pr_st2">Oyiga 500 ta dialog</li><li data-i18n="pr_st3">Telegramdan javob</li><li data-i18n="pr_st4">AI-yordamchi: oyiga 100 ta dialog</li><li data-i18n="pr_st5">Chatda bizning logotip o‘rniga sizniki</li></ul>
-        <div class="rv-cta"><a href="/register" class="btn-primary" data-i18n="pr_start_cta">10 kun bepul sinab ko‘rish</a>
+        <div class="rv-cta"><a href="/register" class="btn-primary" data-i18n="pr_start_cta2">Start tanlash</a>
           <div class="rv-cta-note" data-i18n="pr_refund">Yoqmasa — 30 kun ichida pulni qaytaramiz</div>
         </div>
       </div>
@@ -750,74 +279,9 @@
       </div>
     </div>
     <p class="rv-pay" data-i18n="pr_pay">To‘lov: <b>Uzcard</b> · <b>Humo</b> · <b>Visa / Mastercard</b> · <b>Click</b> · <b>Uzum</b> · yuridik shaxslar uchun hisob va shartnoma</p>
-    <div class="rv-trust">
-      <div class="rv-card">
-        <h3 data-i18n="tr_h">Biz yangi xizmatmiz — buni ochiq aytamiz</h3>
-        <p data-i18n="tr_p">Begona logotiplar o‘rniga — o‘zingiz tekshira oladigan narsalar:</p>
-        <ul class="rv-honest">
-          <li><span class="rv-ic">💬</span><span data-i18n="tr_1"><b>Ushbu sahifa burchagidagi chat — bu Prochat.</b> Yozing — o‘zimiz javob beramiz.</span></li>
-          <li><span class="rv-ic">🤝</span><span data-i18n="tr_2"><b>Ulashga yordam beramiz:</b> chatni saytingizga o‘rnatamiz va javoblarni siz bilan birga sozlaymiz.</span></li>
-          <li><span class="rv-ic">🆓</span><span data-i18n="tr_3"><b>Free muddatsiz:</b> kerakli muddat bepul foydalaning, pullik tarif — Telegram va AI kerak bo‘lganda.</span></li>
-        </ul>
-      </div>
-      <div class="rv-card rv-case">
-        <span class="rv-slot" data-i18n="tr_case_slot">Bu yerda birinchi fikr bo‘ladi</span>
-        <p class="rv-quote" data-i18n="tr_case">Prochatni ulang va u sizda qanday ishlayotganini aytib bering — birinchi fikrlarni saytingizga havola bilan shu yerda joylaymiz.</p>
-        <button type="button" class="rv-case-cta" data-open-chat data-i18n="tr_case_cta">Bizga yozish →</button>
-      </div>
-    </div>
-
-    <div class="onprem-banner">
-      <div class="onprem-left">
-        <div class="onprem-icon">🔒</div>
-        <div>
-          <strong data-i18n="onprem_title">O'z serveringizda joylashtirish kerakmi?</strong>
-          <p data-i18n="onprem_text">Mijozlar ma'lumotlarini uchinchi shaxslarga o'tkazishni istamaydiganlar uchun On-Premise variant mavjud. Ma'lumotlar ustidan to'liq nazorat.</p>
-        </div>
-      </div>
+    <div class="onprem-banner rv-onprem">
+      <div class="onprem-left"><div class="onprem-icon"><svg class="ic" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div><p data-i18n="onprem_short">O‘z serverlaringizda kerakmi? Prochatni sizda o‘rnatamiz — mijozlar ma’lumotlari kompaniya ichida qoladi.</p></div>
       <a href="mailto:sales@prochat.uz" class="btn-outline onprem-btn" data-i18n="onprem_cta">Shartlarni muhokama qilish →</a>
-    </div>
-  </div>
-</section>
-
-<!-- STATS / SOCIAL PROOF -->
-<section class="stats-section">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-i18n="stats_title">Nega biznes onlayn-chatni tanlaydi</h2>
-      <p data-i18n="stats_sub">Forrester, Econsultancy, Gartner tarmoq tadqiqotlari ma'lumotlari</p>
-    </div>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <div class="stat-big">79%</div>
-        <p data-i18n="stat1_text">xaridorlar chatni afzal ko'radi — chunki javobni darhol olishadi, navbatsiz</p>
-        <div class="stat-source">Econsultancy</div>
-      </div>
-      <div class="stat-card stat-card-accent">
-        <div class="stat-big">+18%</div>
-        <p data-i18n="stat2_text">onlayn-chat joriy etgan internet-do'konlarda konversiyaning o'rtacha o'sishi</p>
-        <div class="stat-source">Forrester Research</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">53%</div>
-        <p data-i18n="stat3_text">mijozlar tanlov paytida tez javob olmasalar, xarid qilmasdan ketadi</p>
-        <div class="stat-source">Forrester Research</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">×3.4</div>
-        <p data-i18n="stat4_text">operator yoki bot bilan suhbatga kirgan tashrif buyuruvchilarda xarid ehtimoli yuqori</p>
-        <div class="stat-source">Kissmetrics</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">82%</div>
-        <p data-i18n="stat5_text">standart murojaatlar AI yordamida operator ishtirokisiz avtomatik hal qilinadi</p>
-        <div class="stat-source">HubSpot</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-big">−40%</div>
-        <p data-i18n="stat6_text">AI + operator gibrid modeliga o'tishda bitta murojaat qayta ishlash narxining pasayishi</p>
-        <div class="stat-source">McKinsey</div>
-      </div>
     </div>
   </div>
 </section>
@@ -832,20 +296,20 @@
         <p data-i18n="faq1_a">Yo'q. Bepul tarif kartasiz ishlaydi. Karta faqat pullik tarifga o'tishda kerak bo'ladi.</p>
       </details>
       <details class="faq-item">
-        <summary data-i18n="faq2_q">AI-avtopilot qanday ishlaydi?</summary>
-        <p data-i18n="faq2_a">AI ma'lumotlaringizda o'qiydi: FAQ, hujjatlar, o'tgan muloqotlar. Avtomatik javob beradi, murakkab savollarda tirik operatorga uzatadi.</p>
+        <summary data-i18n="fq_ai_q">AI-yordamchi qanday ishlaydi?</summary>
+        <p data-i18n="fq_ai_a">Bilimlar bazasiga matnlar, fayllar yoki havolalarni yuklang — yordamchi tashrif buyuruvchilarga ular asosida javob beradi, murakkab savollarni operatorga uzatadi. Start va Business tariflarida mavjud.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq3_q">30 kunlik qaytarish kafolati nima?</summary>
-        <p data-i18n="faq3_a">Agar 30 kun ichida konversiya oshmasa — savolsiz pulni qaytaramiz. Qo'llab-quvvatlashga yozing.</p>
+        <p data-i18n="fq_ref_a">Pullik tarifga birinchi to‘lovdan keyin 30 kun ichida so‘rov bo‘yicha pulni qaytaramiz. Shartlar — ommaviy ofertada.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq4_q">Vidjetni o'z uslubingizga moslash mumkinmi?</summary>
-        <p data-i18n="faq4_a">Ha — rang, shakl, joylashuv, operator avatari, salomlashish matni. Business rejada — Prochat brendingini to'liq olib tashlash.</p>
+        <p data-i18n="fq_style_a">Ha: ranglar, tugmaning joyi va ko‘rinishi, logotip, salomlashuv matnlari. Start va Business tariflarida — Prochat logotipisiz.</p>
       </details>
       <details class="faq-item">
         <summary data-i18n="faq5_q">O'zbek tilida qo'llab-quvvatlash bormi?</summary>
-        <p data-i18n="faq5_a">Ha. Qo'llab-quvvatlash jamoasi rus va o'zbek tillarida ishlaydi. Vidjet ham ko'p tilli qo'llab-quvvatlashga ega.</p>
+        <p data-i18n="fq_uz_a">Ha. Mijoz o‘zbek yoki rus tilida yozadi — operator va AI-yordamchi uning tilida javob beradi. Jamoamiz ham ikkala tilda javob beradi.</p>
       </details>
     </div>
   </div>
@@ -955,11 +419,11 @@
 <div class="popup-overlay" id="popup">
   <div class="popup-card">
     <button class="popup-close" id="popupClose">✕</button>
-    <div class="popup-emoji">🎁</div>
-    <h3 data-i18n="popup_title">Maxsus taklif</h3>
-    <p data-i18n="popup_sub">Bugun ro'yxatdan o'ting va <strong>10 kunlik Start</strong>ni bepul oling</p>
-    <a href="/register" class="btn-primary btn-lg" data-i18n="popup_cta">Taklifni olish →</a>
-    <div class="popup-note" data-i18n="popup_note">Kartasiz · Istalgan vaqtda bekor qilish</div>
+    <div class="popup-emoji"><svg class="ic" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></div>
+    <h3 data-i18n="pp_title">Bepul boshlang</h3>
+    <p data-i18n="pp_sub">Free tarifi muddatsiz: 1 operator, 1 sayt, oyiga 50 ta dialog.</p>
+    <a href="/register" class="btn-primary btn-lg" data-i18n="pp_cta">Akkaunt yaratish →</a>
+    <div class="popup-note" data-i18n="pp_note">Kartasiz</div>
   </div>
 </div>
 
@@ -975,7 +439,7 @@
   </div>
 </div>
 
-<script src="/main.js?v=8"></script>
+<script src="/main.js?v=9"></script>
 <!-- Prochat widget -->
 <script>
   window.LiveChatSetup = {
