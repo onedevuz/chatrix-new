@@ -1366,7 +1366,8 @@ body:has(.sticky-cta.visible) .lc-button {
 
   /* Features */
   .features-grid { grid-template-columns: repeat(2, 1fr); }
-  .features-grid .feature-card[style*="span 3"] { grid-column: span 2; }
+  /* inline style="grid-column: span 3" перебивает CSS без !important и растягивает сетку */
+  .features-grid .feature-card[style*="span 3"] { grid-column: span 2 !important; }
 
   /* Use cases */
   .uc-tabs { gap: 6px; }
@@ -1437,6 +1438,13 @@ body:has(.sticky-cta.visible) .lc-button {
   .lang-switcher { padding: 2px; }
   .lang-btn { padding: 3px 6px; font-size: 10px; }
   .dark-toggle { font-size: 15px; padding: 4px; }
+  /* шапка не влезала в 390px: «Войти» дублируется в бургере, тема — системная */
+  .nav-cta .btn-ghost, .nav-right .dark-toggle { display: none; }
+  .nav-inner { gap: 6px; }
+  .nav-right { margin-left: auto; gap: 6px; }
+  .nav-right .btn-primary { padding: 7px 10px; font-size: 12px; white-space: nowrap; }
+  .lang-btn { padding: 3px 5px; }
+  .burger { flex-shrink: 0; margin-left: 2px; }
 
   /* Hero */
   .hero { padding: 44px 0 0; }
@@ -1453,7 +1461,7 @@ body:has(.sticky-cta.visible) .lc-button {
 
   /* Features */
   .features-grid { grid-template-columns: 1fr; gap: 16px; }
-  .features-grid .feature-card[style*="span 3"] { grid-column: span 1; }
+  .features-grid .feature-card[style*="span 3"] { grid-column: span 1 !important; }
   .translate-demo-pill { margin-left: 0; margin-top: 12px; }
   .feature-card { padding: 24px; }
 
@@ -1538,4 +1546,20 @@ body:has(.sticky-cta.visible) .lc-button {
   .popup-card { padding: 36px 20px; }
   .popup-emoji { font-size: 36px; }
   .popup-card h3 { font-size: 20px; }
+}
+
+/* узкие телефоны: шапка (лого + RU/UZ/EN + кнопка + бургер) должна влезать в 360px */
+@media (max-width: 400px) {
+  .nav-right .btn-primary { padding: 7px 8px; font-size: 11px; }
+  .logo { font-size: 17px; }
+}
+@media (max-width: 370px) {
+  .nav-right .btn-primary { padding: 6px 7px; font-size: 10.5px; letter-spacing: -.1px; }
+  .lang-btn { padding: 3px 4px; }
+}
+/* справка: широкие таблицы и код не должны раздвигать страницу на телефоне */
+@media (max-width: 600px) {
+  .legal-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .step-content { min-width: 0; }
+  .step-content pre { overflow-x: auto; max-width: 100%; }
 }
