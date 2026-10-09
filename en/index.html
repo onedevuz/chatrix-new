@@ -385,7 +385,10 @@
       </div>
       <pre><code><span class="cm">&lt;!-- <span data-i18n="code_comment">Paste before</span> &lt;/body&gt; --&gt;</span>
 <span class="ck">&lt;script&gt;</span>
-  <span class="cv">window</span>.ProchatSettings = { <span class="cs">widgetId</span>: <span class="cstr">"ваш-id"</span> };
+  <span class="cv">window</span>.LiveChatSetup = {
+    <span class="cs">orgId</span>: <span class="cstr">"ORG_ID"</span>,
+    <span class="cs">serverUrl</span>: <span class="cstr">"https://api.prochat.uz"</span>
+  };
 <span class="ck">&lt;/script&gt;</span>
 <span class="ck">&lt;script</span> <span class="cs">src</span>=<span class="cstr">"https://cdn.prochat.uz/widget.js"</span> <span class="cs">async</span><span class="ck">&gt;&lt;/script&gt;</span></code></pre>
     </div>
@@ -974,7 +977,7 @@
 </div>
 
 <script src="/main.js?v=7"></script>
-<!-- LiveChat AI widget -->
+<!-- Prochat widget -->
 <script>
   window.LiveChatSetup = {
     orgId: "ae1920f0-1499-43e0-b048-7a916dd355ea",
