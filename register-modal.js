@@ -1,8 +1,8 @@
 /* Prochat — единый попап «Войдите или зарегистрируйтесь» (2026-10).
  *
  * Один экран: «Продолжить с Google / Apple / Telegram». Новый человек
- * регистрируется, существующий входит. Для старых аккаунтов — мелкая ссылка
- * «Войти по почте и паролю» на app.prochat.uz/login.
+ * регистрируется, существующий входит. Входа по почте на лендинге нет
+ * (он только для сотрудников, по отдельному адресу).
  *
  * Открывают: ссылки на register, «Войти» (app.prochat.uz/login), [data-auth].
  * ПК — окно по центру, телефон — bottom-sheet (свайп вниз закрывает).
@@ -19,8 +19,7 @@
     providersUrl: 'https://api.prochat.uz/api/v1/auth/oauth/providers',
     google: 'https://api.prochat.uz/api/v1/auth/oauth/google/start?returnTo=landing&from=landing&lang={lang}',
     apple: 'https://api.prochat.uz/api/v1/auth/oauth/apple/start?returnTo=landing&from=landing&lang={lang}',
-    telegram: 'https://app.prochat.uz/auth/telegram?lang={lang}',
-    emailLogin: 'https://app.prochat.uz/login'
+    telegram: 'https://app.prochat.uz/auth/telegram?lang={lang}'
   };
 
   var T = {
@@ -30,7 +29,6 @@
       google: 'Продолжить с Google', apple: 'Продолжить с Apple', telegram: 'Продолжить с Telegram',
       going: 'Открываем {p}…',
       legal: 'Продолжая, вы принимаете <a href="/terms">оферту</a> и <a href="/privacy">политику конфиденциальности</a>.',
-      email: 'Входили по почте и паролю? <a href="{url}">Войти по почте</a>',
       loading: 'Загружаем способы входа…',
       failed: 'Не удалось загрузить способы входа. Проверьте интернет.', retry: 'Повторить',
       none: 'Вход через сервисы временно недоступен. Напишите нам в чат — поможем.',
@@ -54,7 +52,6 @@
       google: 'Google orqali davom etish', apple: 'Apple orqali davom etish', telegram: 'Telegram orqali davom etish',
       going: '{p} ochilmoqda…',
       legal: 'Davom etish orqali siz <a href="/terms">oferta</a> va <a href="/privacy">maxfiylik siyosati</a>ni qabul qilasiz.',
-      email: 'Pochta va parol bilan kirganmisiz? <a href="{url}">Pochta orqali kirish</a>',
       loading: 'Kirish usullari yuklanmoqda…',
       failed: 'Kirish usullarini yuklab bo‘lmadi. Internetni tekshiring.', retry: 'Qayta urinish',
       none: 'Servislar orqali kirish vaqtincha ishlamayapti. Chatga yozing — yordam beramiz.',
@@ -78,7 +75,6 @@
       google: 'Continue with Google', apple: 'Continue with Apple', telegram: 'Continue with Telegram',
       going: 'Opening {p}…',
       legal: 'By continuing you accept the <a href="/terms">terms of service</a> and the <a href="/privacy">privacy policy</a>.',
-      email: 'Used email and password before? <a href="{url}">Log in with email</a>',
       loading: 'Loading sign-in options…',
       failed: 'Could not load sign-in options. Check your connection.', retry: 'Try again',
       none: 'Sign-in with these services is temporarily unavailable. Write to us in the chat — we will help.',
@@ -137,12 +133,11 @@
     + '.pca-skel{height:50px;border-radius:12px;background:linear-gradient(90deg,rgba(127,127,127,.08),rgba(127,127,127,.16),rgba(127,127,127,.08));background-size:200% 100%;animation:pcaSkel 1.2s ease-in-out infinite}'
     + '@keyframes pcaSkel{to{background-position:-200% 0}}'
     + '.pca-legal{font-size:12.5px;line-height:1.5;color:var(--pca-muted);margin:18px 0 0}'
-    + '.pca-legal a,.pca-email a{color:#4f46e5;font-weight:600;text-decoration:none}.pca-legal a:hover,.pca-email a:hover{text-decoration:underline}'
-    + '.pca-email{font-size:13.5px;color:var(--pca-muted);margin:14px 0 0;padding-top:14px;border-top:1px solid var(--pca-border)}'
-    + '[data-theme=dark] .pca-card{--pca-bg:#1f2937;--pca-text:#f9fafb;--pca-muted:#cbd5e1;--pca-border:#374151}'
+    + '.pca-legal a{color:#4f46e5;font-weight:600;text-decoration:none}.pca-legal a:hover{text-decoration:underline}'
+        + '[data-theme=dark] .pca-card{--pca-bg:#1f2937;--pca-text:#f9fafb;--pca-muted:#cbd5e1;--pca-border:#374151}'
     + '[data-theme=dark] .pca-google{background:#131314;color:#e3e3e3;border-color:#8e918f}[data-theme=dark] .pca-google:hover{background:#1f1f20}'
     + '[data-theme=dark] .pca-apple{background:#fff;color:#000;border-color:#fff}[data-theme=dark] .pca-apple:hover{background:#e5e7eb}'
-    + '[data-theme=dark] .pca-legal a,[data-theme=dark] .pca-email a{color:#a5b4fc}'
+    + '[data-theme=dark] .pca-legal a{color:#a5b4fc}'
     + '[data-theme=dark] .pca-err{background:#3f1d1d;border-color:#7f1d1d;color:#fecaca}'
     + '@media (max-width:600px){'
     + '.pca-overlay{align-items:flex-end;padding:0}'
@@ -196,8 +191,7 @@
       + '<p class="pca-sub">' + t.sub + '</p>'
       + '<div class="pca-err" role="alert">' + ICONS.alert + '<span></span></div>'
       + '<div class="pca-btns" aria-live="polite"></div>'
-      + '<p class="pca-legal">' + t.legal + '</p>'
-      + '<p class="pca-email">' + fill(t.email, { url: CFG.emailLogin }) + '</p>';
+      + '<p class="pca-legal">' + t.legal + '</p>';
   }
 
   function renderButtons(card) {
