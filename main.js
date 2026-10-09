@@ -44,7 +44,7 @@ const translations = {
     pp_title: "Начните бесплатно",
     pp_sub: "Тариф Free без срока: 1 оператор, 1 сайт, 50 диалогов в месяц.",
     pp_cta: "Создать аккаунт →",
-    pp_note: "Без карты",
+    pp_note: "",
 
     // вариант B главной (2026-10)
     hb_offer: "Бесплатный тариф без срока: 1 оператор, 50 диалогов в месяц · Start - 10 дней бесплатно",
@@ -63,7 +63,7 @@ const translations = {
     hb_s3_h: "ИИ-ассистент отвечает сам",
     hb_s3_p: "Отвечает по вашим текстам и прайсу, сложное оставляет вам на утро.",
     pr_title: "Цены в сумах. Начните бесплатно",
-    pr_sub: "Платите, когда чат начнёт приносить заявки. Карта на старте не нужна.",
+    pr_sub: "Платите, когда чат начнёт приносить заявки.",
     pr_rec: "Рекомендуем",
     pr_som: "сум",
     pr_mo: "/мес",
@@ -142,7 +142,7 @@ const translations = {
     popup_title: "Специальное предложение",
     popup_sub: "Зарегистрируйтесь сегодня и получите <strong>10 дней Start</strong> бесплатно",
     popup_cta: "Забрать оффер →",
-    popup_note: "Без карты · Отмена в любой момент",
+    popup_note: "",
     cookie_text: "Мы используем cookies для улучшения сайта.",
     cookie_link: "Подробнее →",
     cookie_decline: "Отклонить",
@@ -154,7 +154,7 @@ const translations = {
     hero_badge_ai: "ИИ-консультант отвечает 24/7",
     hero_badge_local: "Поддержка на русском и узбекском",
     hero_title: "Онлайн-чат для сайта, который превращает посетителей в <span class=\"gradient-text\">клиентов</span>",
-    hero_sub: "Онлайн-чат, AI-автопилот и аналитика для бизнеса. Устанавливается за 5 минут. Без карты.",
+    hero_sub: "Онлайн-чат, ИИ-ассистент и аналитика для бизнеса. Установка за 5 минут.",
     hero_cta_primary: "Начать бесплатно →", hero_cta_demo: "Смотреть демо",
     stat_companies: "компаний", stat_min: "мин", stat_setup: "установка",
     stat_ai: "AI-поддержка", stat_days: "дней", stat_guarantee: "гарантия",
@@ -201,7 +201,7 @@ const translations = {
     roi_result_sub: "в месяц при росте конверсии на +18%",
     roi_cta: "Начать зарабатывать больше →",
     how_title: "Запуск за 3 шага", how_sub: "От регистрации до первого чата - 5 минут",
-    step1_title: "Зарегистрируйтесь", step1_sub: "Создайте аккаунт. Карту вводить не нужно.",
+    step1_title: "Зарегистрируйтесь", step1_sub: "Войдите через Google, Apple или Telegram.",
     step2_title: "Установите виджет", step2_sub: "Скопируйте 2 строки кода на свой сайт.",
     step3_title: "Общайтесь", step3_sub: "Принимайте чаты прямо в браузере - на компьютере или телефоне.",
     code_comment: "Вставьте перед",
@@ -217,7 +217,7 @@ const translations = {
     integr_sub: "Подключается к популярным платформам за пару кликов",
     integr_more: "И ещё 50+",
     pricing_title: "Прозрачные цены",
-    pricing_sub: "Без скрытых платежей. Начните бесплатно - без карты.",
+    pricing_sub: "Без скрытых платежей. Начните бесплатно.",
     plan_forever: "/навсегда", plan_per_month: "/мес", plan_per_op: "/оператор/мес",
     plan_operator: "оператор", plan_dialogs: "диалогов/мес",
     plan_ai_hints: "AI-подсказок/мес", plan_widget: "Чат-виджет (RU/UZ/EN)",
@@ -271,8 +271,8 @@ const translations = {
     review2_role: "Руководитель поддержки, Shopper.uz",
     review3_text: "\"Нравится что чат с сайта и Telegram - в одном кабинете. Не теряем обращения.\"",
     review3_role: "Основатель, Delivery Pro",
-    faq1_q: "Нужно ли вводить карту при регистрации?",
-    faq1_a: "Нет. Бесплатный план работает без карты. Карта нужна только при переходе на платный тариф.",
+    faq1_q: "Сколько стоит начать?",
+    faq1_a: "Нисколько. Тариф Free бесплатный и без срока: 1 оператор, 1 сайт, 50 диалогов в месяц. Платный тариф подключаете, когда понадобится больше.",
     faq2_q: "Как работает AI-автопилот?",
     faq2_a: "AI обучается на ваших данных: FAQ, документации, прошлых диалогах. Отвечает автоматически, при сложных вопросах передаёт живому оператору.",
     faq3_q: "Что такое гарантия возврата 30 дней?",
@@ -282,7 +282,7 @@ const translations = {
     faq5_q: "Есть ли поддержка на узбекском языке?",
     faq5_a: "Да. Команда поддержки работает на русском и узбекском языках. Виджет также поддерживает мультиязычность.",
     cta_title: "Готовы начать?",
-    cta_sub: "Бесплатно. Без карты. Первый чат - через 5 минут.",
+    cta_sub: "Первый чат на сайте уже через 5 минут.",
     cta_btn: "Создать аккаунт →",
     footer_tagline: "Онлайн-чат и AI для бизнеса",
     footer_product: "Продукт", footer_company: "Компания", footer_integrations: "Интеграции",
@@ -340,7 +340,7 @@ const translations = {
     pp_title: "Bepul boshlang",
     pp_sub: "Free tarifi muddatsiz: 1 operator, 1 sayt, oyiga 50 ta dialog.",
     pp_cta: "Akkaunt yaratish →",
-    pp_note: "Kartasiz",
+    pp_note: "",
 
     // вариант B главной (2026-10)
     hb_offer: "Muddatsiz bepul tarif: 1 operator, oyiga 50 ta dialog · Start - 10 kun bepul",
@@ -359,7 +359,7 @@ const translations = {
     hb_s3_h: "AI-yordamchi o‘zi javob beradi",
     hb_s3_p: "Matnlaringiz va narxlaringiz bo‘yicha javob beradi, murakkabini ertalabga qoldiradi.",
     pr_title: "Narxlar so‘mda. Bepul boshlang",
-    pr_sub: "Chat arizalar keltira boshlaganda to‘laysiz. Boshlash uchun karta kerak emas.",
+    pr_sub: "Chat arizalar keltira boshlaganda to‘laysiz.",
     pr_rec: "Tavsiya qilamiz",
     pr_som: "so‘m",
     pr_mo: "/oy",
@@ -438,7 +438,7 @@ const translations = {
     popup_title: "Maxsus taklif",
     popup_sub: "Bugun ro'yxatdan o'ting va <strong>10 kunlik Start</strong>ni bepul oling",
     popup_cta: "Taklifni olish →",
-    popup_note: "Kartasiz · Istalgan vaqtda bekor qilish",
+    popup_note: "",
     cookie_text: "Saytni yaxshilash uchun cookie-fayllardan foydalanamiz.",
     cookie_link: "Batafsil →",
     cookie_decline: "Rad etish",
@@ -450,7 +450,7 @@ const translations = {
     hero_badge_ai: "AI-maslahatchi 24/7 javob beradi",
     hero_badge_local: "O'zbek va rus tilida qo'llab-quvvatlash",
     hero_title: "Sayt uchun onlayn-chat: tashrif buyuruvchilarni <span class=\"gradient-text\">mijozlarga</span> aylantiradi",
-    hero_sub: "Onlayn-chat, AI-avtopilot va tahlil. 5 daqiqada o'rnatiladi. Karta talab etilmaydi.",
+    hero_sub: "Onlayn-chat, AI-yordamchi va tahlil. 5 daqiqada o'rnatiladi.",
     hero_cta_primary: "Bepul boshlash →", hero_cta_demo: "Demoni ko'rish",
     stat_companies: "kompaniya", stat_min: "daq", stat_setup: "o'rnatish",
     stat_ai: "AI-qo'llab-quvvatlash", stat_days: "kun", stat_guarantee: "kafolat",
@@ -516,7 +516,7 @@ const translations = {
     roi_result_sub: "oyiga +18% konversiya o'sishi bilan",
     roi_cta: "Ko'proq ishlashni boshlash →",
     how_title: "3 bosqichda ishga tushirish", how_sub: "Ro'yxatdan o'tishdan birinchi chatgacha - 5 daqiqa",
-    step1_title: "Ro'yxatdan o'ting", step1_sub: "Hisob yarating. Karta talab etilmaydi.",
+    step1_title: "Ro'yxatdan o'ting", step1_sub: "Google, Apple yoki Telegram orqali kiring.",
     step2_title: "Vidjetni o'rnating", step2_sub: "Saytingizga 2 qator kod nusxalang.",
     step3_title: "Muloqot qiling", step3_sub: "Chatlarni to'g'ridan-to'g'ri brauzerda qabul qiling - kompyuter yoki telefon.",
     code_comment: "Qo'yish kerak",
@@ -532,7 +532,7 @@ const translations = {
     integr_sub: "Mashhur platformalarga bir necha klik bilan ulanadi",
     integr_more: "Va yana 50+",
     pricing_title: "Shaffof narxlar",
-    pricing_sub: "Yashirin to'lovlar yo'q. Kartasiz bepul boshlang.",
+    pricing_sub: "Yashirin to'lovlar yo'q. Bepul boshlang.",
     plan_forever: "/abadiy", plan_per_month: "/oy", plan_per_op: "/operator/oy",
     plan_operator: "operator", plan_dialogs: "muloqot/oy",
     plan_ai_hints: "AI-maslahat/oy", plan_widget: "Chat vidjet (RU/UZ/EN)",
@@ -567,8 +567,8 @@ const translations = {
     review2_role: "Qo'llab-quvvatlash rahbari, Shopper.uz",
     review3_text: "\"Saytdagi chat va Telegram bitta kabinetda - yoqadi. Hech qanday murojaat yo'qolmaydi.\"",
     review3_role: "Asoschisi, Delivery Pro",
-    faq1_q: "Ro'yxatdan o'tishda karta kerakmi?",
-    faq1_a: "Yo'q. Bepul tarif kartasiz ishlaydi. Karta faqat pullik tarifga o'tishda kerak bo'ladi.",
+    faq1_q: "Boshlash qancha turadi?",
+    faq1_a: "Hech narsa. Free tarifi bepul va muddatsiz: 1 operator, 1 sayt, oyiga 50 ta dialog. Ko‘proq kerak bo‘lganda pullik tarifga o‘tasiz.",
     faq2_q: "AI-avtopilot qanday ishlaydi?",
     faq2_a: "AI ma'lumotlaringizda o'qiydi: FAQ, hujjatlar, o'tgan muloqotlar. Avtomatik javob beradi, murakkab savollarda tirik operatorga uzatadi.",
     faq3_q: "30 kunlik qaytarish kafolati nima?",
@@ -578,7 +578,7 @@ const translations = {
     faq5_q: "O'zbek tilida qo'llab-quvvatlash bormi?",
     faq5_a: "Ha. Qo'llab-quvvatlash jamoasi rus va o'zbek tillarida ishlaydi. Vidjet ham ko'p tilli qo'llab-quvvatlashga ega.",
     cta_title: "Boshlashga tayyormisiz?",
-    cta_sub: "Bepul. Kartasiz. Birinchi chat - 5 daqiqada.",
+    cta_sub: "Saytdagi birinchi chat 5 daqiqada.",
     cta_btn: "Hisob yaratish →",
     footer_tagline: "Biznes uchun onlayn-chat va AI",
     footer_product: "Mahsulot", footer_company: "Kompaniya", footer_integrations: "Integratsiyalar",
@@ -636,7 +636,7 @@ const translations = {
     pp_title: "Start for free",
     pp_sub: "Free plan with no time limit: 1 operator, 1 site, 50 chats a month.",
     pp_cta: "Create account →",
-    pp_note: "No card",
+    pp_note: "",
 
     // вариант B главной (2026-10)
     hb_offer: "Free plan with no time limit: 1 operator, 50 chats a month · Start - 10 days free",
@@ -655,7 +655,7 @@ const translations = {
     hb_s3_h: "The AI assistant answers",
     hb_s3_p: "It answers from your texts and prices and leaves hard questions for the morning.",
     pr_title: "Prices in UZS. Start free",
-    pr_sub: "Pay once the chat starts bringing requests. No card to start.",
+    pr_sub: "Pay once the chat starts bringing requests.",
     pr_rec: "Recommended",
     pr_som: "UZS",
     pr_mo: "/mo",
@@ -734,7 +734,7 @@ const translations = {
     popup_title: "Special offer",
     popup_sub: "Sign up today and get <strong>10 days of Start</strong> for free",
     popup_cta: "Claim offer →",
-    popup_note: "No card · Cancel anytime",
+    popup_note: "",
     cookie_text: "We use cookies to improve the site.",
     cookie_link: "Learn more →",
     cookie_decline: "Decline",
@@ -746,7 +746,7 @@ const translations = {
     hero_badge_ai: "AI assistant answers 24/7",
     hero_badge_local: "Support in Russian & Uzbek",
     hero_title: "Live chat for your website that turns visitors into <span class=\"gradient-text\">customers</span>",
-    hero_sub: "Live chat, AI autopilot and analytics for business. Setup in 5 minutes. No credit card.",
+    hero_sub: "Live chat, AI assistant and analytics for business. Setup in 5 minutes.",
     hero_cta_primary: "Get started free →", hero_cta_demo: "Watch demo",
     stat_companies: "companies", stat_min: "min", stat_setup: "setup",
     stat_ai: "AI support", stat_days: "days", stat_guarantee: "guarantee",
@@ -812,7 +812,7 @@ const translations = {
     roi_result_sub: "per month with +18% conversion lift",
     roi_cta: "Start earning more →",
     how_title: "Live in 3 steps", how_sub: "From sign-up to first chat - 5 minutes",
-    step1_title: "Sign up", step1_sub: "Create an account. No credit card needed.",
+    step1_title: "Sign up", step1_sub: "Sign in with Google, Apple or Telegram.",
     step2_title: "Install the widget", step2_sub: "Copy 2 lines of code to your site.",
     step3_title: "Start chatting", step3_sub: "Accept chats directly in your browser - desktop or mobile.",
     code_comment: "Paste before",
@@ -828,7 +828,7 @@ const translations = {
     integr_sub: "Connects to popular platforms in a few clicks",
     integr_more: "And 50+ more",
     pricing_title: "Transparent pricing",
-    pricing_sub: "No hidden fees. Start free - no card required.",
+    pricing_sub: "No hidden fees. Start free.",
     plan_forever: "/forever", plan_per_month: "/mo", plan_per_op: "/operator/mo",
     plan_operator: "operator", plan_dialogs: "conversations/mo",
     plan_ai_hints: "AI suggestions/mo", plan_widget: "Chat widget (RU/UZ/EN)",
@@ -863,8 +863,8 @@ const translations = {
     review2_role: "Head of Support, Shopper.uz",
     review3_text: "\"Love having website chat and Telegram in one dashboard. No tickets get lost.\"",
     review3_role: "Founder, Delivery Pro",
-    faq1_q: "Do I need a credit card to sign up?",
-    faq1_a: "No. The free plan works without a card. A card is only needed when upgrading to a paid plan.",
+    faq1_q: "How much does it cost to start?",
+    faq1_a: "Nothing. The Free plan has no time limit: 1 operator, 1 site, 50 chats a month. Upgrade when you need more.",
     faq2_q: "How does the AI autopilot work?",
     faq2_a: "AI trains on your data: FAQ, docs, past conversations. It answers automatically and hands off to a human operator for complex questions.",
     faq3_q: "What is the 30-day money-back guarantee?",
@@ -874,7 +874,7 @@ const translations = {
     faq5_q: "Is there support in Uzbek?",
     faq5_a: "Yes. Our support team works in Russian and Uzbek. The widget also supports multilingual mode.",
     cta_title: "Ready to get started?",
-    cta_sub: "Free. No card. First chat in 5 minutes.",
+    cta_sub: "Your first website chat in 5 minutes.",
     cta_btn: "Create account →",
     footer_tagline: "Live chat and AI for business",
     footer_product: "Product", footer_company: "Company", footer_integrations: "Integrations",
@@ -1005,17 +1005,22 @@ if (stickyClose) stickyClose.addEventListener('click', () => {
 });
 
 // ===== POPUP =====
-const popup = document.getElementById('popup');
-const popupClose = document.getElementById('popupClose');
-const popupShown = sessionStorage.getItem('prochat_popup');
-if (!popupShown && popup) {
+// ===== ОФФЕР (окно с кнопками входа) =====
+// Показываем редко: не раньше 30 с на странице, не чаще раза в 7 дней,
+// и не тем, кто уже открывал вход сам. Само окно рисует register-modal.js.
+(function () {
+  const WEEK = 7 * 24 * 3600 * 1000;
+  let last = 0;
+  try { last = +localStorage.getItem('prochat_offer_ts') || 0; } catch (e) {}
+  if (Date.now() - last < WEEK) return;
   setTimeout(() => {
-    popup.classList.add('visible');
-    sessionStorage.setItem('prochat_popup', '1');
-  }, 15000);
-}
-if (popupClose) popupClose.addEventListener('click', () => popup.classList.remove('visible'));
-if (popup) popup.addEventListener('click', e => { if (e.target === popup) popup.classList.remove('visible'); });
+    let seen = null;
+    try { seen = sessionStorage.getItem('prochat_auth_seen'); } catch (e) {}
+    if (seen || document.hidden || !window.ProchatAuth || document.documentElement.classList.contains('pca-lock')) return;
+    try { localStorage.setItem('prochat_offer_ts', String(Date.now())); } catch (e) {}
+    window.ProchatAuth.offer();
+  }, 30000);
+})();
 
 // ===== COOKIE BANNER =====
 const cookieBanner = document.getElementById('cookieBanner');
@@ -1066,7 +1071,7 @@ function runHeroChat() {
     { type: 'user',  text: { ru: 'Какие у вас тарифы?', uz: 'Narxlaringiz qanday?', en: 'What are your pricing plans?' } },
     { type: 'agent', text: { ru: 'Free, Start 149 000 сум и Business 390 000 сум/мес. Показать подробнее?', uz: 'Free, Start 149 000 so\'m va Business 390 000 so\'m/oy. Batafsil ko\'rsataymi?', en: 'Free, Start 149,000 UZS and Business 390,000 UZS/mo. Want details?' } },
     { type: 'user',  text: { ru: 'Да, и есть ли пробный период?', uz: 'Ha, sinov muddati bormi?', en: 'Yes, is there a trial?' } },
-    { type: 'agent', text: { ru: '10 дней Pro бесплатно - без карты! 🎉', uz: '10 kun Pro bepul - kartsiz! 🎉', en: '10 days Pro free - no card! 🎉' } },
+    { type: 'agent', text: { ru: 'Тариф Free бесплатный и без срока.', uz: 'Free tarifi bepul va muddatsiz.', en: 'The Free plan is free with no time limit.' } },
   ];
   let idx = 0;
   body.innerHTML = '';
@@ -1189,8 +1194,8 @@ const AI_REPLIES = {
   'цен': 'У нас 3 тарифа: Free (бесплатно навсегда), Start 149 000 сум/мес и Business 390 000 сум/мес. Все тарифы с 30-дневной гарантией возврата.',
   'тариф': 'У нас 3 тарифа: Free (бесплатно навсегда), Start 149 000 сум/мес и Business 390 000 сум/мес. Все тарифы с 30-дневной гарантией возврата.',
   'стоит': 'У нас 3 тарифа: Free (бесплатно навсегда), Start 149 000 сум/мес и Business 390 000 сум/мес. Все тарифы с 30-дневной гарантией возврата.',
-  'бесплатн': 'Да! Бесплатный план работает навсегда - 1 оператор, 50 диалогов в месяц. Карта не нужна для регистрации.',
-  'free': 'Да! Бесплатный план работает навсегда - 1 оператор, 50 диалогов в месяц. Карта не нужна для регистрации.',
+  'бесплатн': 'Да! Бесплатный план работает навсегда - 1 оператор, 50 диалогов в месяц.',
+  'free': 'Да! Бесплатный план работает навсегда - 1 оператор, 50 диалогов в месяц.',
   'установ': 'Очень просто! Скопируйте один скрипт из личного кабинета и вставьте перед </body> на сайте. Занимает 2 минуты.',
   'telegram': 'Да, Telegram интегрирован! Создаёте бота через @BotFather, вставляете токен в настройках Prochat - и все сообщения из Telegram и сайта в одном окне.',
   'ai': 'AI-автопилот обучается на вашей базе знаний и отвечает на вопросы 24/7. Когда не знает ответа - передаёт оператору.',

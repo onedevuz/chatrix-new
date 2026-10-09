@@ -1,12 +1,12 @@
-/* Prochat — единый попап «Войдите или зарегистрируйтесь» (2026-10).
+/* Prochat - единый попап «Войдите или зарегистрируйтесь» (2026-10).
  *
  * Один экран: «Продолжить с Google / Apple / Telegram». Новый человек
  * регистрируется, существующий входит. Входа по почте на лендинге нет
  * (он только для сотрудников, по отдельному адресу).
  *
  * Открывают: ссылки на register, «Войти» (app.prochat.uz/login), [data-auth].
- * ПК — окно по центру, телефон — bottom-sheet (свайп вниз закрывает).
- * Кнопки показываются по GET /auth/oauth/providers: нет провайдера — нет кнопки.
+ * ПК - окно по центру, телефон - bottom-sheet (свайп вниз закрывает).
+ * Кнопки показываются по GET /auth/oauth/providers: нет провайдера - нет кнопки.
  * ?auth_error=<code> в адресе открывает попап с понятным текстом ошибки.
  * На register.html компонент рисуется прямо в странице: <div data-auth-inline></div>.
  */
@@ -14,81 +14,88 @@
   if (window.__pcAuthLoaded) return;
   window.__pcAuthLoaded = true;
 
-  // URL старта соцвхода — плейсхолдеры до подтверждения разработчиком.
+  // URL соцвхода - от разработчика кабинета (09.10.2026).
   var CFG = {
     providersUrl: 'https://api.prochat.uz/api/v1/auth/oauth/providers',
-    google: 'https://api.prochat.uz/api/v1/auth/oauth/google/start?returnTo=landing&from=landing&lang={lang}',
-    apple: 'https://api.prochat.uz/api/v1/auth/oauth/apple/start?returnTo=landing&from=landing&lang={lang}',
-    telegram: 'https://app.prochat.uz/auth/telegram?lang={lang}'
+    google: 'https://api.prochat.uz/api/v1/auth/oauth/google/start?returnTo=landing&mode={mode}&lang={lang}',
+    apple: 'https://api.prochat.uz/api/v1/auth/oauth/apple/start?returnTo=landing&mode={mode}&lang={lang}',
+    telegram: 'https://app.prochat.uz/auth/telegram?mode={mode}&lang={lang}',
+    appOrigin: 'https://app.prochat.uz'
   };
 
   var T = {
     ru: {
       title: 'Войдите или зарегистрируйтесь',
-      sub: 'Нет аккаунта — создадим автоматически. Бесплатно, без карты.',
+      sub: 'Если аккаунта ещё нет, он создастся сам. Это бесплатно.',
+      offerTitle: 'Чат на сайте за 5 минут',
+      offerSub: 'Тариф Free бесплатный и без срока. Войдите, и чат сразу готов к установке.',
+      offerBubble1: 'Assalomu alaykum! Yetkazib berish bormi?', offerBubble2: 'Ha, ertaga olib boramiz.',
       google: 'Продолжить с Google', apple: 'Продолжить с Apple', telegram: 'Продолжить с Telegram',
       going: 'Открываем {p}…',
       legal: 'Продолжая, вы принимаете <a href="/terms">оферту</a> и <a href="/privacy">политику конфиденциальности</a>.',
       loading: 'Загружаем способы входа…',
       failed: 'Не удалось загрузить способы входа. Проверьте интернет.', retry: 'Повторить',
-      none: 'Вход через сервисы временно недоступен. Напишите нам в чат — поможем.',
+      none: 'Вход через сервисы временно недоступен. Напишите нам в чат, поможем.',
       close: 'Закрыть',
       err: {
-        disabled: 'Этот способ входа сейчас недоступен. Выберите другой.',
-        state: 'Сессия входа устарела. Попробуйте ещё раз.',
-        provider: 'Сервис входа не ответил. Попробуйте ещё раз или выберите другой способ.',
-        cancelled: 'Вход отменён. Можно попробовать снова.',
+        disabled: 'Этот способ входа пока недоступен. Выберите другой.',
+        state: 'Вход не завершился. Так бывает, если окно было открыто слишком долго. Попробуйте ещё раз.',
+        provider: 'Не получилось войти через этот сервис. Попробуйте ещё раз или выберите другой.',
+        code: 'Ссылка для входа устарела. Попробуйте ещё раз.',
         telegram_signature: 'Telegram не подтвердил вход. Попробуйте ещё раз.',
-        telegram_expired: 'Подтверждение из Telegram устарело. Попробуйте ещё раз.',
-        inactive: 'Этот аккаунт отключён. Напишите нам в чат — разберёмся.',
-        platform_account: 'Это служебный аккаунт — войдите на app.prochat.uz.',
-        code: 'Не удалось завершить вход. Попробуйте ещё раз.',
+        telegram_expired: 'Подтверждение Telegram устарело. Попробуйте ещё раз.',
+        inactive: 'Аккаунт не активирован. Обратитесь к владельцу организации.',
+        platform_account: 'Для этого аккаунта вход только по почте и паролю.',
         _: 'Не получилось войти. Попробуйте ещё раз.'
       }
     },
     uz: {
       title: 'Kiring yoki ro‘yxatdan o‘ting',
-      sub: 'Akkaunt bo‘lmasa — avtomatik yaratamiz. Bepul, kartasiz.',
+      sub: 'Akkaunt bo‘lmasa, u avtomatik yaratiladi. Bu bepul.',
+      offerTitle: 'Saytga chat 5 daqiqada',
+      offerSub: 'Free tarifi bepul va muddatsiz. Kiring, chat o‘rnatishga darhol tayyor.',
+      offerBubble1: 'Assalomu alaykum! Yetkazib berish bormi?', offerBubble2: 'Ha, ertaga olib boramiz.',
       google: 'Google orqali davom etish', apple: 'Apple orqali davom etish', telegram: 'Telegram orqali davom etish',
       going: '{p} ochilmoqda…',
       legal: 'Davom etish orqali siz <a href="/terms">oferta</a> va <a href="/privacy">maxfiylik siyosati</a>ni qabul qilasiz.',
       loading: 'Kirish usullari yuklanmoqda…',
       failed: 'Kirish usullarini yuklab bo‘lmadi. Internetni tekshiring.', retry: 'Qayta urinish',
-      none: 'Servislar orqali kirish vaqtincha ishlamayapti. Chatga yozing — yordam beramiz.',
+      none: 'Servislar orqali kirish vaqtincha ishlamayapti. Chatga yozing, yordam beramiz.',
       close: 'Yopish',
       err: {
-        disabled: 'Bu kirish usuli hozir ishlamayapti. Boshqasini tanlang.',
-        state: 'Kirish sessiyasi eskirdi. Qayta urinib ko‘ring.',
-        provider: 'Kirish servisi javob bermadi. Qayta urinib ko‘ring yoki boshqa usulni tanlang.',
-        cancelled: 'Kirish bekor qilindi. Qayta urinib ko‘rishingiz mumkin.',
-        telegram_signature: 'Telegram kirishni tasdiqlamadi. Qayta urinib ko‘ring.',
-        telegram_expired: 'Telegramdan tasdiq eskirdi. Qayta urinib ko‘ring.',
-        inactive: 'Bu akkaunt o‘chirilgan. Chatga yozing — hal qilamiz.',
-        platform_account: 'Bu xizmat akkaunti — app.prochat.uz orqali kiring.',
-        code: 'Kirishni yakunlab bo‘lmadi. Qayta urinib ko‘ring.',
-        _: 'Kirish amalga oshmadi. Qayta urinib ko‘ring.'
+        disabled: 'Bu kirish usuli hozircha mavjud emas. Boshqasini tanlang.',
+        state: 'Kirish yakunlanmadi. Oyna juda uzoq ochiq qolgan bo\'lishi mumkin. Qaytadan urinib ko\'ring.',
+        provider: 'Bu xizmat orqali kirib bo\'lmadi. Qaytadan urinib ko\'ring yoki boshqasini tanlang.',
+        code: 'Kirish havolasi eskirgan. Qaytadan urinib ko\'ring.',
+        telegram_signature: 'Telegram kirishni tasdiqlamadi. Qaytadan urinib ko\'ring.',
+        telegram_expired: 'Telegram tasdig\'i eskirgan. Qaytadan urinib ko\'ring.',
+        inactive: 'Akkaunt faollashtirilmagan. Tashkilot egasiga murojaat qiling.',
+        platform_account: 'Bu akkaunt uchun faqat pochta va parol bilan kirish mumkin.',
+        _: 'Kirish amalga oshmadi. Qaytadan urinib ko\'ring.'
       }
     },
     en: {
       title: 'Log in or sign up',
-      sub: 'No account yet? We will create one automatically. Free, no card.',
+      sub: 'No account yet? It will be created automatically, free of charge.',
+      offerTitle: 'Chat on your site in 5 minutes',
+      offerSub: 'The Free plan costs nothing and has no time limit. Sign in and the chat is ready to install.',
+      offerBubble1: 'Assalomu alaykum! Yetkazib berish bormi?', offerBubble2: 'Ha, ertaga olib boramiz.',
       google: 'Continue with Google', apple: 'Continue with Apple', telegram: 'Continue with Telegram',
       going: 'Opening {p}…',
       legal: 'By continuing you accept the <a href="/terms">terms of service</a> and the <a href="/privacy">privacy policy</a>.',
       loading: 'Loading sign-in options…',
       failed: 'Could not load sign-in options. Check your connection.', retry: 'Try again',
-      none: 'Sign-in with these services is temporarily unavailable. Write to us in the chat — we will help.',
+      none: 'Sign-in with these services is temporarily unavailable. Write to us in the chat and we will help.',
       close: 'Close',
       err: {
-        disabled: 'This sign-in method is unavailable right now. Please choose another one.',
-        state: 'The sign-in session expired. Please try again.',
-        provider: 'The sign-in service did not respond. Try again or choose another method.',
-        cancelled: 'Sign-in was cancelled. You can try again.',
-        telegram_signature: 'Telegram did not confirm the sign-in. Please try again.',
-        telegram_expired: 'The Telegram confirmation expired. Please try again.',
-        inactive: 'This account is disabled. Write to us in the chat — we will sort it out.',
-        platform_account: 'This is a service account — please log in at app.prochat.uz.',
-        code: 'Could not finish signing in. Please try again.',
+        disabled: 'This sign-in option isn\'t available yet. Please choose another one.',
+        state: 'Sign-in didn\'t complete. The window may have been open too long. Please try again.',
+        provider: 'Couldn\'t sign in with this service. Try again or choose another one.',
+        code: 'The sign-in link has expired. Please try again.',
+        telegram_signature: 'Telegram didn\'t confirm the sign-in. Please try again.',
+        telegram_expired: 'The Telegram confirmation has expired. Please try again.',
+        inactive: 'Your account is not activated. Contact the organization owner.',
+        platform_account: 'This account signs in with email and password only.',
         _: 'Sign-in failed. Please try again.'
       }
     }
@@ -111,6 +118,15 @@
     + '.pca-overlay.shown .pca-card{transform:none}'
     + '.pca-inline .pca-card{box-shadow:0 12px 40px rgba(17,24,39,.08);border:1px solid var(--pca-border);margin:0 auto;transform:none}'
     + '.pca-handle{display:none}'
+    + '.pca-hero{margin:-32px -28px 22px;padding:26px 24px 22px;border-radius:20px 20px 0 0;background:linear-gradient(135deg,#6366f1 0%,#8b5cf6 100%);position:relative;overflow:hidden}'
+    + '.pca-hero::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.12)}'
+    + '.pca-mini{position:relative;z-index:1;max-width:260px;margin:0 auto;background:#fff;border-radius:16px;box-shadow:0 14px 34px rgba(30,27,75,.35);padding:10px;text-align:left;font-size:12.5px;color:#111827}'
+    + '.pca-mini-h{display:flex;align-items:center;gap:8px;padding:2px 2px 8px;border-bottom:1px solid #eef0f4;margin-bottom:8px;font-weight:700;font-size:12px}'
+    + '.pca-mini-h i{width:8px;height:8px;border-radius:50%;background:#22c55e;display:inline-block}'
+    + '.pca-mini-b{padding:7px 10px;border-radius:12px;line-height:1.35;max-width:88%;margin-bottom:6px}'
+    + '.pca-mini-b.v{background:#f3f4f6}.pca-mini-b.o{background:#6366f1;color:#fff;margin-left:auto;margin-bottom:0}'
+    + '.pca-offer .pca-logo{display:none}'
+    + '.pca-offer .pca-close{color:#fff;z-index:2}.pca-offer .pca-close:hover{background:rgba(255,255,255,.18);color:#fff}'
     + '.pca-close{position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;border:0;background:transparent;color:var(--pca-muted);display:grid;place-items:center;cursor:pointer}'
     + '.pca-close:hover{background:rgba(127,127,127,.12);color:var(--pca-text)}'
     + '.pca-logo{font-weight:800;font-size:20px;letter-spacing:-.5px;color:#6366f1;margin-bottom:14px}.pca-logo span{color:var(--pca-text)}'
@@ -143,6 +159,8 @@
     + '.pca-overlay{align-items:flex-end;padding:0}'
     + '.pca-overlay .pca-card{max-width:none;border-radius:22px 22px 0 0;padding:10px 20px calc(18px + env(safe-area-inset-bottom));transform:translateY(100%);transition:transform .28s cubic-bezier(.2,.8,.2,1);max-height:92vh;overflow-y:auto;overscroll-behavior:contain}'
     + '.pca-overlay.shown .pca-card{transform:translateY(0)}'
+    + '.pca-overlay .pca-hero{margin:-10px -20px 18px;padding:22px 18px 18px;border-radius:22px 22px 0 0}'
+    + '.pca-offer .pca-handle{position:absolute;left:50%;top:8px;margin:0;transform:translateX(-50%);background:rgba(255,255,255,.55);z-index:2}'
     + '.pca-overlay .pca-handle{display:block;width:40px;height:5px;border-radius:3px;background:rgba(127,127,127,.35);margin:0 auto 14px}'
     + '.pca-overlay .pca-close{top:8px;right:8px}'
     + '.pca-inline .pca-card{padding:26px 18px 18px}'
@@ -156,7 +174,7 @@
   document.head.appendChild(style);
 
   function lang() {
-    // /uz/ и /en/ — язык страницы; иначе выбранный на сайте (localStorage), иначе lang документа.
+    // /uz/ и /en/ - язык страницы; иначе выбранный на сайте (localStorage), иначе lang документа.
     var h = document.documentElement, pl = h.getAttribute('data-page-lang');
     if (pl && pl !== 'ru' && T[pl]) return pl;
     var l = null;
@@ -181,20 +199,26 @@
   }
 
   // ---------- разметка ----------
-  function cardHtml(withClose) {
+  function cardHtml(withClose, variant) {
     var t = T[lang()];
+    var offer = variant === 'offer';
+    var hero = offer
+      ? '<div class="pca-hero" aria-hidden="true"><div class="pca-mini"><div class="pca-mini-h"><i></i>prochat</div>'
+        + '<div class="pca-mini-b v">' + t.offerBubble1 + '</div><div class="pca-mini-b o">' + t.offerBubble2 + '</div></div></div>'
+      : '';
     return ''
       + '<div class="pca-handle" aria-hidden="true"></div>'
       + (withClose ? '<button type="button" class="pca-close" aria-label="' + t.close + '">' + ICONS.close + '</button>' : '')
       + '<div class="pca-logo">prochat<span>.</span></div>'
-      + '<h2 id="pca-title">' + t.title + '</h2>'
-      + '<p class="pca-sub">' + t.sub + '</p>'
+      + hero
+      + '<h2 id="pca-title">' + (offer ? t.offerTitle : t.title) + '</h2>'
+      + '<p class="pca-sub">' + (offer ? t.offerSub : t.sub) + '</p>'
       + '<div class="pca-err" role="alert">' + ICONS.alert + '<span></span></div>'
       + '<div class="pca-btns" aria-live="polite"></div>'
       + '<p class="pca-legal">' + t.legal + '</p>';
   }
 
-  function renderButtons(card) {
+  function renderButtons(card, mode) {
     var t = T[lang()];
     var box = card.querySelector('.pca-btns');
     box.innerHTML = '<div class="pca-skel"></div><div class="pca-skel"></div><div class="pca-skel"></div>'
@@ -203,13 +227,13 @@
       var html = '';
       ORDER.forEach(function (k) {
         if (!p[k]) return;
-        html += '<a class="pca-btn pca-' + k + '" data-provider="' + k + '" href="' + fill(CFG[k], { lang: lang() }) + '">'
+        html += '<a class="pca-btn pca-' + k + '" data-provider="' + k + '" href="' + fill(CFG[k], { lang: lang(), mode: mode === 'login' ? 'login' : 'register' }) + '">'
           + '<span class="pca-ic">' + ICONS[k] + '</span><span class="pca-label">' + t[k] + '</span></a>';
       });
       box.innerHTML = html || '<div class="pca-state">' + t.none + '</div>';
     }).catch(function () {
       box.innerHTML = '<div class="pca-state">' + t.failed + '<br><button type="button" class="pca-retry">' + t.retry + '</button></div>';
-      box.querySelector('.pca-retry').addEventListener('click', function () { providers = null; renderButtons(card); });
+      box.querySelector('.pca-retry').addEventListener('click', function () { providers = null; renderButtons(card, mode); });
     });
   }
 
@@ -221,7 +245,17 @@
       var t = T[lang()];
       a.setAttribute('aria-busy', 'true');
       a.querySelector('.pca-ic').innerHTML = '<span class="pca-spin"></span>';
+      var label = a.querySelector('.pca-label').textContent;
       a.querySelector('.pca-label').textContent = fill(t.going, { p: NAMES[a.getAttribute('data-provider')] });
+      // Telegram на ПК - отдельным окном, кабинет пришлёт postMessage и окно закроется.
+      if (a.getAttribute('data-provider') === 'telegram' && !matchMedia('(max-width: 600px), (pointer: coarse)').matches) {
+        var w = window.open(a.href, 'tg', 'width=520,height=640');
+        if (w) {
+          e.preventDefault();
+          var ic = ICONS.telegram;
+          setTimeout(function () { a.removeAttribute('aria-busy'); a.querySelector('.pca-ic').innerHTML = ic; a.querySelector('.pca-label').textContent = label; }, 2500);
+        } // окно заблокировано - обычный переход по ссылке
+      }
     });
   }
 
@@ -263,18 +297,20 @@
     wireSwipe();
   }
 
-  function open(e, errCode) {
+  function open(e, errCode, variant, mode) {
     if (e && e.preventDefault) e.preventDefault();
     build();
     lastFocus = document.activeElement;
-    card.innerHTML = cardHtml(true);
-    renderButtons(card);
+    card.innerHTML = cardHtml(true, variant);
+    card.classList.toggle('pca-offer', variant === 'offer');
+    if (variant !== 'offer') { try { sessionStorage.setItem('prochat_auth_seen', '1'); } catch (x) {} }
+    renderButtons(card, variant === 'offer' ? 'register' : mode);
     showError(card, errCode);
     card.style.transform = '';
     overlay.classList.add('open');
     lockScroll();
     requestAnimationFrame(function () { requestAnimationFrame(function () { overlay.classList.add('shown'); }); });
-    // Фокус: на телефоне не трогаем (лишний прыжок), на ПК — на крестик, чтобы Tab шёл по кнопкам.
+    // Фокус: на телефоне не трогаем (лишний прыжок), на ПК - на крестик, чтобы Tab шёл по кнопкам.
     if (!matchMedia('(max-width: 600px)').matches) setTimeout(function () { var c = card.querySelector('.pca-close'); if (c) c.focus({ preventScroll: true }); }, 30);
   }
 
@@ -331,17 +367,25 @@
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest(SELECTORS);
     if (!a || a.closest('.pca-card') || a.closest('[data-auth-inline]')) return;
-    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // новая вкладка — как обычная ссылка
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button === 1) return; // новая вкладка - как обычная ссылка
     if (document.querySelector('[data-auth-inline]')) { e.preventDefault(); document.querySelector('[data-auth-inline]').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
-    open(e);
+    var href = a.getAttribute('href') || '';
+    open(e, null, null, /app\.prochat\.uz\/login/.test(href) || a.getAttribute('data-auth') === 'login' ? 'login' : 'register');
   });
 
   // ---------- старт ----------
   function init() {
     var params = new URLSearchParams(location.search);
     var err = params.get('auth_error');
+    var urlLang = params.get('lang');
     if (err) {
+      // Язык, с которого человек уходил на вход, кабинет возвращает в ?lang=.
+      if (T[urlLang]) {
+        try { localStorage.setItem('prochat_lang', urlLang); } catch (x) {}
+        if (typeof window.applyLang === 'function') { try { window.applyLang(urlLang); } catch (x) {} }
+      }
       params.delete('auth_error');
+      params.delete('lang');
       var q = params.toString();
       history.replaceState(null, '', location.pathname + (q ? '?' + q : '') + location.hash);
     }
@@ -352,20 +396,30 @@
       var c = inline.firstChild;
       c.innerHTML = cardHtml(false);
       wireCard(c);
-      renderButtons(c);
-      showError(c, err);
-      // При смене языка на странице — перерисовать.
+      renderButtons(c, 'register');
+      showError(c, err === 'cancelled' ? null : err);
+      // При смене языка на странице - перерисовать.
       document.addEventListener('click', function (e) {
-        if (e.target.closest && e.target.closest('.lang-btn')) setTimeout(function () { c.innerHTML = cardHtml(false); renderButtons(c); }, 0);
+        if (e.target.closest && e.target.closest('.lang-btn')) setTimeout(function () { c.innerHTML = cardHtml(false); renderButtons(c, 'register'); }, 0);
       });
     } else if (err) {
-      open(null, err);
+      // cancelled - человек сам закрыл окно провайдера: попап без текста ошибки.
+      open(null, err === 'cancelled' ? null : err, null, 'register');
     }
     // Прогреваем список провайдеров заранее, чтобы попап открывался без ожидания.
     setTimeout(function () { loadProviders().catch(function () {}); }, 1500);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
 
-  window.ProchatAuth = { open: open, close: close, config: CFG };
+  // Успешный вход через Telegram-окно: кабинет присылает адрес, куда перейти.
+  window.addEventListener('message', function (e) {
+    if (e.origin !== CFG.appOrigin) return;
+    var d = e.data;
+    if (!d || d.type !== 'prochat:auth' || d.status !== 'ok') return;
+    var to = typeof d.redirect === 'string' && d.redirect.indexOf(CFG.appOrigin + '/') === 0 ? d.redirect : CFG.appOrigin + '/';
+    location.href = to;
+  });
+
+  window.ProchatAuth = { open: open, close: close, offer: function () { open(null, null, 'offer', 'register'); }, config: CFG };
   window.ProchatRegister = { open: open, close: close }; // совместимость со старым кодом
 })();
