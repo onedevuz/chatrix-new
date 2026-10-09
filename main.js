@@ -1061,7 +1061,7 @@ const AI_REPLIES = {
   'опла': 'Принимаем Visa/Mastercard, Uzcard, Humo и безналичный расчёт для юрлиц.',
   'operator': 'На тарифе Start — до 3 операторов, на Business — без ограничений.',
 };
-const DEFAULT_REPLY = 'Спасибо за вопрос! Наш специалист ответит в ближайшее время. Вы также можете написать нам в Telegram: @prochat_support';
+const DEFAULT_REPLY = 'Спасибо за вопрос! Наш специалист ответит в ближайшее время. Вы также можете написать нам в Telegram: @bakhtikhasanov';
 
 function getAiReply(text) {
   const lower = text.toLowerCase();
