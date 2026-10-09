@@ -1,20 +1,32 @@
 User-agent: *
 Allow: /
 Disallow: /gen_blog.py
+Disallow: /blog/_article-template
+Disallow: /tools/
 
 Sitemap: https://prochat.uz/sitemap.xml
 
 User-agent: GPTBot
 Allow: /
+Disallow: /blog/_article-template
+Disallow: /tools/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /blog/_article-template
+Disallow: /tools/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /blog/_article-template
+Disallow: /tools/
 
 User-agent: Googlebot
 Allow: /
+Disallow: /blog/_article-template
+Disallow: /tools/
 
 User-agent: Yandex
 Allow: /
+Disallow: /blog/_article-template
+Disallow: /tools/

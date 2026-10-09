@@ -2,6 +2,51 @@
 const translations = {
   ru: {
     meta_title: "Prochat — Онлайн-чат и AI для вашего сайта",
+    uc_title: "Для кого подходит Prochat",
+    uc_sub: "Разные задачи — одно решение",
+    uc_tab_ecom: "🛒 Интернет-магазин",
+    uc_tab_support: "🎧 Поддержка",
+    uc_tab_sales: "📈 Продажи",
+    uc_ecom_title: "Увеличьте продажи без найма операторов",
+    uc_ecom_1: "✓ Оператор отвечает на вопросы о наличии, доставке, оплате",
+    uc_ecom_2: "✓ Триггер-сообщения при брошенной корзине",
+    uc_ecom_3: "✓ Интеграция с CRM и системой заказов",
+    uc_ecom_4: "✓ Среднее увеличение конверсии +18%",
+    uc_cta: "Начать бесплатно →",
+    uc_metric_conv: "конверсия",
+    uc_metric_abandon: "брошенных корзин",
+    uc_metric_response: "среднее время ответа",
+    uc_support_title: "Снизьте нагрузку на службу поддержки",
+    uc_support_1: "✓ Быстрые ответы и шаблоны закрывают типовые обращения за секунды",
+    uc_support_2: "✓ Внутренняя база ответов с горячими клавишами",
+    uc_support_3: "✓ Мультиканал: чат и Telegram в одном окне",
+    uc_support_4: "✓ SLA-контроль и отчёты по операторам",
+    uc_metric_speed: "быстрее ответ",
+    uc_metric_cost: "стоимость поддержки",
+    uc_metric_single: "все каналы",
+    uc_sales_title: "Квалифицируйте лиды пока вы спите",
+    uc_sales_1: "✓ Автоматический захват контактов",
+    uc_sales_2: "✓ Квалификация лидов по вашим критериям",
+    uc_sales_3: "✓ Push уведомления при горячем лиде",
+    uc_sales_4: "✓ Передача в CRM одним кликом",
+    uc_metric_leads: "лидов в месяц",
+    uc_metric_qual: "квалификация",
+    uc_metric_cycle: "цикл сделки",
+    plan_site: "сайт",
+    plan_white_label: "White label",
+    plan_sites: "сайта",
+    plan_unlimited_sites: "Безлимит сайтов",
+    footer_made_by: "Разработано",
+    sticky_text: "Начните бесплатно прямо сейчас",
+    sticky_btn: "Создать аккаунт →",
+    popup_title: "Специальное предложение",
+    popup_sub: "Зарегистрируйтесь сегодня и получите <strong>14 дней Pro</strong> бесплатно",
+    popup_cta: "Забрать оффер →",
+    popup_note: "Без карты · Отмена в любой момент",
+    cookie_text: "Мы используем cookies для улучшения сайта.",
+    cookie_link: "Подробнее →",
+    cookie_decline: "Отклонить",
+    cookie_accept: "Принять",
     nav_features: "Возможности", nav_how: "Как работает", nav_pricing: "Цены",
     nav_integrations: "Интеграции", nav_blog: "Блог", nav_help: "Справка",
     nav_login: "Войти", nav_start: "Попробовать бесплатно",
@@ -153,6 +198,51 @@ const translations = {
 
   uz: {
     meta_title: "Prochat — Saytingiz uchun onlayn chat va AI",
+    uc_title: "Prochat kimlar uchun",
+    uc_sub: "Turli vazifalar — bitta yechim",
+    uc_tab_ecom: "🛒 Internet-do'kon",
+    uc_tab_support: "🎧 Qo'llab-quvvatlash",
+    uc_tab_sales: "📈 Savdo",
+    uc_ecom_title: "Operator yollamasdan savdoni oshiring",
+    uc_ecom_1: "✓ Operator mavjudlik, yetkazib berish va to'lov haqidagi savollarga javob beradi",
+    uc_ecom_2: "✓ Tashlab ketilgan savat uchun trigger-xabarlar",
+    uc_ecom_3: "✓ CRM va buyurtmalar tizimi bilan integratsiya",
+    uc_ecom_4: "✓ Konversiya o'rtacha +18% oshadi",
+    uc_cta: "Bepul boshlash →",
+    uc_metric_conv: "konversiya",
+    uc_metric_abandon: "tashlab ketilgan savatlar",
+    uc_metric_response: "o'rtacha javob vaqti",
+    uc_support_title: "Qo'llab-quvvatlash xizmatiga yukni kamaytiring",
+    uc_support_1: "✓ Tezkor javoblar va shablonlar odatiy murojaatlarni soniyalarda yopadi",
+    uc_support_2: "✓ Tezkor tugmalar bilan ichki javoblar bazasi",
+    uc_support_3: "✓ Ko'p kanal: chat va Telegram bitta oynada",
+    uc_support_4: "✓ SLA nazorati va operatorlar bo'yicha hisobotlar",
+    uc_metric_speed: "tezroq javob",
+    uc_metric_cost: "qo'llab-quvvatlash xarajati",
+    uc_metric_single: "barcha kanallar",
+    uc_sales_title: "Siz uxlayotganda lidlarni saralang",
+    uc_sales_1: "✓ Kontaktlarni avtomatik yig'ish",
+    uc_sales_2: "✓ Lidlarni sizning mezonlaringiz bo'yicha saralash",
+    uc_sales_3: "✓ Issiq lid paydo bo'lganda push-bildirishnoma",
+    uc_sales_4: "✓ Bir bosishda CRM'ga uzatish",
+    uc_metric_leads: "oyiga lidlar",
+    uc_metric_qual: "saralash",
+    uc_metric_cycle: "bitim davri",
+    plan_site: "sayt",
+    plan_white_label: "White label",
+    plan_sites: "sayt",
+    plan_unlimited_sites: "Cheksiz saytlar",
+    footer_made_by: "Ishlab chiqqan",
+    sticky_text: "Hoziroq bepul boshlang",
+    sticky_btn: "Akkaunt yaratish →",
+    popup_title: "Maxsus taklif",
+    popup_sub: "Bugun ro'yxatdan o'ting va <strong>14 kunlik Pro</strong>ni bepul oling",
+    popup_cta: "Taklifni olish →",
+    popup_note: "Kartasiz · Istalgan vaqtda bekor qilish",
+    cookie_text: "Saytni yaxshilash uchun cookie-fayllardan foydalanamiz.",
+    cookie_link: "Batafsil →",
+    cookie_decline: "Rad etish",
+    cookie_accept: "Qabul qilish",
     nav_features: "Imkoniyatlar", nav_how: "Qanday ishlaydi", nav_pricing: "Narxlar",
     nav_integrations: "Integratsiyalar", nav_blog: "Blog", nav_help: "Yordam",
     nav_login: "Kirish", nav_start: "Bepul sinab ko'ring",
@@ -304,6 +394,51 @@ const translations = {
 
   en: {
     meta_title: "Prochat — Live Chat & AI for Your Website",
+    uc_title: "Who Prochat is for",
+    uc_sub: "Different tasks — one solution",
+    uc_tab_ecom: "🛒 Online store",
+    uc_tab_support: "🎧 Support",
+    uc_tab_sales: "📈 Sales",
+    uc_ecom_title: "Grow sales without hiring more operators",
+    uc_ecom_1: "✓ Operators answer questions about stock, delivery and payment",
+    uc_ecom_2: "✓ Trigger messages on abandoned carts",
+    uc_ecom_3: "✓ Integration with your CRM and order system",
+    uc_ecom_4: "✓ Average conversion uplift of +18%",
+    uc_cta: "Start free →",
+    uc_metric_conv: "conversion",
+    uc_metric_abandon: "abandoned carts",
+    uc_metric_response: "average response time",
+    uc_support_title: "Reduce the load on your support team",
+    uc_support_1: "✓ Quick replies and templates close typical requests in seconds",
+    uc_support_2: "✓ Internal reply library with hotkeys",
+    uc_support_3: "✓ Multichannel: chat and Telegram in one window",
+    uc_support_4: "✓ SLA tracking and per-operator reports",
+    uc_metric_speed: "faster replies",
+    uc_metric_cost: "support cost",
+    uc_metric_single: "all channels",
+    uc_sales_title: "Qualify leads while you sleep",
+    uc_sales_1: "✓ Automatic contact capture",
+    uc_sales_2: "✓ Lead qualification by your criteria",
+    uc_sales_3: "✓ Push notifications for hot leads",
+    uc_sales_4: "✓ One-click handoff to CRM",
+    uc_metric_leads: "leads per month",
+    uc_metric_qual: "qualification",
+    uc_metric_cycle: "sales cycle",
+    plan_site: "website",
+    plan_white_label: "White label",
+    plan_sites: "websites",
+    plan_unlimited_sites: "Unlimited websites",
+    footer_made_by: "Built by",
+    sticky_text: "Start free right now",
+    sticky_btn: "Create account →",
+    popup_title: "Special offer",
+    popup_sub: "Sign up today and get <strong>14 days of Pro</strong> for free",
+    popup_cta: "Claim offer →",
+    popup_note: "No card · Cancel anytime",
+    cookie_text: "We use cookies to improve the site.",
+    cookie_link: "Learn more →",
+    cookie_decline: "Decline",
+    cookie_accept: "Accept",
     nav_features: "Features", nav_how: "How it works", nav_pricing: "Pricing",
     nav_integrations: "Integrations", nav_blog: "Blog", nav_help: "Help",
     nav_login: "Sign in", nav_start: "Try for free",
@@ -469,19 +604,34 @@ function applyLang(lang) {
     const key = el.getAttribute('data-i18n-placeholder');
     if (t[key] !== undefined) el.placeholder = t[key];
   });
-  if (t.meta_title) document.title = t.meta_title;
+  if (t.meta_title && lang !== pageLang) document.title = t.meta_title;
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.lang === lang);
   });
   localStorage.setItem('prochat_lang', lang);
 }
 
+// Static language versions of the home page: / (ru), /uz/, /en/ — pre-rendered
+// by tools/build-home-locales.mjs so search bots see each language on its own URL.
+const LANG_URLS = { ru: '/', uz: '/uz/', en: '/en/' };
+const pageLang = document.documentElement.dataset.pageLang || null;
+
 document.querySelectorAll('.lang-btn').forEach(btn => {
-  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+  btn.addEventListener('click', () => {
+    const lang = btn.dataset.lang;
+    if (pageLang && LANG_URLS[lang] && location.pathname !== LANG_URLS[lang]) {
+      try { localStorage.setItem('prochat_lang', lang); } catch (e) {}
+      location.href = LANG_URLS[lang] + location.hash;
+      return;
+    }
+    applyLang(lang);
+  });
 });
 
-const savedLang = localStorage.getItem('prochat_lang');
-if (savedLang && translations[savedLang]) applyLang(savedLang);
+let savedLang = null;
+try { savedLang = localStorage.getItem('prochat_lang'); } catch (e) {}
+if (pageLang && pageLang !== 'ru' && translations[pageLang]) applyLang(pageLang);
+else if (savedLang && translations[savedLang]) applyLang(savedLang);
 
 // ===== ROI CALCULATOR =====
 function calcROI() {

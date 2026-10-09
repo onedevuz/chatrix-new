@@ -1,0 +1,97 @@
+#!/usr/bin/env node
+// Builds static UZ and EN versions of the home page (uz/index.html, en/index.html)
+// from index.html + translations in main.js, so search bots see each language
+// on its own URL (the root page is translated only by JS, bots see RU there).
+//
+// Run from repo root after any change to index.html or main.js translations:
+//   node tools/build-home-locales.mjs
+// Do not edit uz/index.html and en/index.html by hand — they are overwritten.
+// Deploy: rsync must exclude tools/ (not needed on the server).
+
+import fs from 'node:fs';
+import path from 'node:path';
+
+const root = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
+const src = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+const js = fs.readFileSync(path.join(root, 'main.js'), 'utf8');
+const block = js.slice(js.indexOf('const translations'), js.indexOf('// ===== LANG SWITCHER'));
+const translations = new Function(block + ';return translations')();
+
+const SITE = 'https://prochat.uz';
+const META = {
+  uz: {
+    url: `${SITE}/uz/`,
+    title: "Sayt uchun onlayn chat — Prochat · O'zbekiston",
+    desc: "Prochat — O'zbekistondagi saytlar uchun onlayn chat: o'zbek va rus tillarida, Telegram bitta oynada, AI-yordamchi 24/7. Bepul tarif, 5 daqiqada o'rnatish.",
+    ogTitle: "Prochat — sayt uchun onlayn chat · O'zbekiston",
+    ogDesc: "O'zbek tilini to'liq qo'llab-quvvatlaydigan onlayn chat. Telegram, analitika, white-label. 5 daqiqada o'rnatish. Bepul tarif.",
+    locale: 'uz_UZ',
+  },
+  en: {
+    url: `${SITE}/en/`,
+    title: 'Live Chat for Websites in Uzbekistan — Prochat',
+    desc: 'Prochat is a live chat for websites in Uzbekistan: Uzbek and Russian support, Telegram in one inbox, AI assistant 24/7. Free plan, set up in 5 minutes.',
+    ogTitle: 'Prochat — Live Chat for Websites · Uzbekistan',
+    ogDesc: 'Live chat with full Uzbek language support. Telegram, analytics, white-label. Set up in 5 minutes. Free plan.',
+    locale: 'en_US',
+  },
+};
+
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+function setAttr(html, re, value) {
+  if (!re.test(html)) throw new Error('pattern not found: ' + re);
+  return html.replace(re, (m, a, _old, b) => a + esc(value) + b);
+}
+
+function build(lang) {
+  const t = translations[lang];
+  const m = META[lang];
+  let html = src;
+  const missing = [];
+
+  // 1. data-i18n elements: replace inner HTML (elements must not nest the same tag)
+  html = html.replace(/<([a-z0-9]+)(\s[^>]*?)?\sdata-i18n="([^"]+)"([^>]*)>([\s\S]*?)<\/\1>/g,
+    (all, tag, pre = '', key, post, inner) => {
+      if (new RegExp('<' + tag + '[\\s>]').test(inner)) throw new Error(`nested <${tag}> in data-i18n="${key}"`);
+      if (t[key] === undefined) { missing.push(key); return all; }
+      return `<${tag}${pre} data-i18n="${key}"${post}>${t[key]}</${tag}>`;
+    });
+  // 2. placeholders
+  html = html.replace(/(<[^>]*data-i18n-placeholder="([^"]+)"[^>]*>)/g, (tagStr, _x, key) =>
+    t[key] === undefined ? tagStr : tagStr.replace(/placeholder="[^"]*"/, `placeholder="${esc(t[key])}"`));
+
+  // 3. head meta
+  html = html.replace(/<html lang="ru"[^>]*>/, `<html lang="${lang}" data-page-lang="${lang}">`);
+  html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(m.title)}</title>`);
+  html = setAttr(html, /(<meta name="description" content=")([^"]*)(")/, m.desc);
+  html = setAttr(html, /(<meta property="og:title" content=")([^"]*)(")/, m.ogTitle);
+  html = setAttr(html, /(<meta property="og:description" content=")([^"]*)(")/, m.ogDesc);
+  html = setAttr(html, /(<meta property="og:url" content=")([^"]*)(")/, m.url);
+  html = setAttr(html, /(<meta name="twitter:title" content=")([^"]*)(")/, m.ogTitle);
+  html = setAttr(html, /(<meta name="twitter:description" content=")([^"]*)(")/, m.ogDesc);
+  html = setAttr(html, /(<link rel="canonical" href=")([^"]*)(")/, m.url);
+  html = html.replace(/<meta property="og:locale" content="[^"]*" \/>\s*<meta property="og:locale:alternate" content="[^"]*" \/>\s*<meta property="og:locale:alternate" content="[^"]*" \/>/,
+    ['ru_RU', 'uz_UZ', 'en_US'].filter((l) => l !== m.locale).reduce((acc, l) => acc + `\n  <meta property="og:locale:alternate" content="${l}" />`, `<meta property="og:locale" content="${m.locale}" />`));
+  html = html.replace(/<meta name="keywords"[^>]*>\s*/, '');
+
+  // 4. relative URLs -> root-absolute (page lives in a subfolder)
+  html = html.replace(/\b(href|src)="(?!https?:|\/\/|\/|#|mailto:|tel:|data:|javascript:)([^"]+)"/g, '$1="/$2"');
+
+  // 4b. currency label in static prices
+  html = html.replace(/(\d) сум/g, lang === 'uz' ? "$1 so'm" : '$1 UZS');
+
+  // 5. language buttons: current one active
+  html = html.replace(/<button class="lang-btn( active)?" data-lang="(ru|uz|en)">/g,
+    (_m, _a, l) => `<button class="lang-btn${l === lang ? ' active' : ''}" data-lang="${l}">`);
+
+  html = html.replace('<!DOCTYPE html>', `<!DOCTYPE html>\n<!-- GENERATED by tools/build-home-locales.mjs from index.html + main.js. Do not edit by hand. -->`);
+
+  if (missing.length) throw new Error(`${lang}: missing translations: ${[...new Set(missing)].join(', ')}`);
+  const out = path.join(root, lang, 'index.html');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, html);
+  console.log('wrote', path.relative(root, out));
+}
+
+for (const lang of Object.keys(META)) build(lang);
