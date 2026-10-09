@@ -32,7 +32,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" /></noscript>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/style.css?v=20261009" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -118,70 +118,48 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <div class="hero-badges-row">
-        <div class="hero-badge">🤖 <span data-i18n="hero_badge_ai">AI-maslahatchi 24/7 javob beradi</span></div>
-        <div class="hero-badge local">🇺🇿 <span data-i18n="hero_badge_local">O'zbek va rus tilida qo'llab-quvvatlash</span></div>
-      </div>
-      <h1 data-i18n="hero_title">Sayt uchun onlayn-chat: tashrif buyuruvchilarni <span class="gradient-text">mijozlarga</span> aylantiradi</h1>
-      <p class="hero-sub" data-i18n="hero_sub">Onlayn-chat, AI-avtopilot va tahlil. 5 daqiqada o'rnatiladi. Karta talab etilmaydi.</p>
-      <div class="hero-actions">
-        <a href="/register" class="btn-primary btn-lg" data-i18n="hero_cta_primary">Bepul boshlash →</a>
-        <a href="#demo" class="btn-ghost btn-lg" data-i18n="hero_cta_demo">Demoni ko'rish</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>5 <span data-i18n="stat_min">daq</span></strong><span data-i18n="stat_setup">o'rnatish</span></div>
-        <div class="stat-sep"></div>
-        <div class="stat"><strong>RU/UZ/EN</strong><span data-i18n="stat_ai">AI-qo'llab-quvvatlash</span></div>
-        <div class="stat-sep"></div>
-        <div class="stat"><strong>30 <span data-i18n="stat_days">kun</span></strong><span data-i18n="stat_guarantee">kafolat</span></div>
-      </div>
+<!-- HERO (вариант B, 2026-10) -->
+<section class="rv-hero-b">
+  <div class="container">
+    <div class="rv-eyebrow"><span class="rv-dot"></span><span data-i18n="hb_offer">Muddatsiz bepul tarif: 1 operator, oyiga 50 ta dialog · Start — 10 kun bepul</span></div>
+    <h1 data-i18n="hb_title">Sayt uchun onlayn-chat — <span class="gradient-text">Telegramdan</span> javob bering</h1>
+    <p class="rv-sub" data-i18n="hb_sub">Mijoz saytda o‘zbek yoki rus tilida yozadi — xabar darhol Telegramingizga keladi. Telefondan javob berasiz, mijoz javobni saytda ko‘radi. Tunda AI-yordamchi javob beradi.</p>
+    <div class="rv-ctas">
+      <a href="/register" class="btn-primary btn-lg" data-i18n="hb_cta">Bepul ulash →</a>
+      <button type="button" class="rv-btn-ask" data-open-chat><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span data-i18n="hb_ask">Chatda savol berish</span></button>
     </div>
-    <div class="hero-visual">
-      <div class="chat-window">
-        <div class="chat-header">
-          <div class="chat-avatar"><img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="Agent" /></div>
-          <div class="chat-agent-info">
-            <strong data-i18n="chat_agent_name">Alina</strong>
-            <span class="online-dot"></span><em data-i18n="chat_online">onlayn</em>
-          </div>
-          <button class="chat-close">✕</button>
+    <p class="rv-price-chip" data-i18n="hb_note">Telegram va AI-yordamchi — Start tarifida, oyiga 149 000 so‘m. Yoqmasa — 30 kun ichida pulni qaytaramiz.</p>
+    <div class="rv-flow">
+      <div class="rv-step">
+        <div class="rv-step-cap" data-i18n="hb_s1_cap">1 · Saytda</div><h3 data-i18n="hb_s1_h">Mijoz savol beradi</h3>
+        <div class="rv-screen site" aria-hidden="true">
+          <div class="rv-bub v">Salom! Yetkazib berish bormi?<small>mebel-shop.uz · 14:02</small></div>
+          <div class="rv-bub a">Ha, Toshkent bo‘ylab 1 kunda 🚚<small>14:03</small></div>
         </div>
-        <div class="chat-body">
-          <div class="msg msg-agent">
-            <div class="msg-bubble" data-i18n="chat_msg1">Salom! Qanday yordam bera olaman? 👋</div>
-            <div class="msg-time">14:32</div>
-          </div>
-          <div class="msg msg-user">
-            <div class="msg-bubble" data-i18n="chat_msg2">Narxlaringiz qanday?</div>
-            <div class="msg-time">14:33</div>
-          </div>
-          <div class="msg msg-agent">
-            <div class="msg-bubble" data-i18n="chat_msg3">Bepul tarif va Business 390 000 so'm/oy mavjud. Batafsil ko'rsataymi?</div>
-            <div class="msg-time">14:33</div>
-          </div>
-          <div class="msg msg-typing">
-            <div class="typing-dots"><span></span><span></span><span></span></div>
-          </div>
-        </div>
-        <div class="chat-input-row">
-          <input type="text" data-i18n-placeholder="Xabar yozing..." placeholder="Напишите сообщение..." readonly />
-          <button class="send-btn">→</button>
-        </div>
+        <p data-i18n="hb_s1_p">Chat istalgan sahifada, tashrif buyuruvchi tilida ochiladi.</p>
       </div>
-      <div class="notification-card">
-        <div class="notif-icon">💬</div>
-        <div class="notif-text"><strong data-i18n="notif_title">Yangi tashrif buyuruvchi</strong><br/><span data-i18n="notif_sub">Narxlar sahifasini ko'rmoqda</span></div>
+      <div class="rv-arrow" aria-hidden="true">→</div>
+      <div class="rv-step">
+        <div class="rv-step-cap" data-i18n="hb_s2_cap">2 · Telegramda</div><h3 data-i18n="hb_s2_h">Telefondan javob berasiz</h3>
+        <div class="rv-screen tg" aria-hidden="true">
+          <div class="rv-tg-top"><span class="rv-tg-ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M21.9 4.3L18.7 19.4c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.4-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.3 13 1.5 11.5c-1-.3-1-1 .2-1.5L20.6 2.8c.9-.3 1.6.2 1.3 1.5z"/></svg></span>Prochat bot</div>
+          <div class="rv-bub bot">🔔 mebel-shop.uz: «Salom! Yetkazib berish bormi?»</div>
+          <div class="rv-bub me">Ha, Toshkent bo‘ylab 1 kunda 🚚<small>14:03 ✓✓</small></div>
+        </div>
+        <p data-i18n="hb_s2_p">Bildirishnoma Telegramga keladi — javob mijozga saytda yetib boradi.</p>
       </div>
-      <div class="floating-badge green">+18% <span data-i18n="float_conversion">konversiya</span></div>
+      <div class="rv-arrow" aria-hidden="true">→</div>
+      <div class="rv-step">
+        <div class="rv-step-cap" data-i18n="hb_s3_cap">3 · Tunda</div><h3 data-i18n="hb_s3_h">AI-yordamchi o‘zi javob beradi</h3>
+        <div class="rv-screen night" aria-hidden="true">
+          <div class="rv-bub v">Shanba kuni ishlaysizlarmi?<small>23:40</small></div>
+          <div class="rv-bub a">Ha, shanba 10:00–18:00. Telefon raqamingizni qoldirasizmi?<small>23:40</small></div>
+        </div>
+        <p data-i18n="hb_s3_p">Matnlaringiz va narxlaringiz bo‘yicha javob beradi, murakkabini ertalabga qoldiradi.</p>
+      </div>
     </div>
   </div>
-  <div class="hero-wave"><svg viewBox="0 0 1440 80" fill="none"><path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="white"/></svg></div>
 </section>
-
 
 <!-- FEATURES -->
 <section class="features" id="features">
@@ -733,139 +711,57 @@
   </div>
 </section>
 
-<!-- EARLY ADOPTERS -->
-<section class="early-section" id="early">
-  <div class="container">
-    <div class="early-card">
-      <div class="early-left">
-        <div class="early-tag" data-i18n="early_tag">🚀 Biz endigina ishga tushirdik</div>
-        <h2 data-i18n="early_title">Birinchilar bo'ling — maxsus shartlar oling</h2>
-        <p data-i18n="early_sub">Prochat — yangi mahsulot. Buni ochiq aytamiz. Buning evaziga yetuk servislar bera olmaydigan narsani taklif qilamiz: jamoa bilan to'g'ridan-to'g'ri aloqa, mahsulotga ta'sir va abadiy narx.</p>
-        <ul class="early-list">
-          <li>
-            <div class="early-icon">🔒</div>
-            <div><strong data-i18n="early_b1">Narx abadiy qotib qoladi</strong><br/><span data-i18n="early_b1s">Dastlabki mijozlar Start uchun har doim 149 000 so'm/oy to'laydi — tarif ko'tarilsa ham</span></div>
-          </li>
-          <li>
-            <div class="early-icon">📞</div>
-            <div><strong data-i18n="early_b2">Asoschilarga to'g'ridan-to'g'ri kirish</strong><br/><span data-i18n="early_b2s">Jamoa bilan onboarding, Telegramda bir soat ichida javob</span></div>
-          </li>
-          <li>
-            <div class="early-icon">🗳️</div>
-            <div><strong data-i18n="early_b3">Mahsulotga ta'sir qilasiz</strong><br/><span data-i18n="early_b3s">Sizning so'rovlar birinchi o'rinda. Oyda bir marta xususiyat ovoz berish</span></div>
-          </li>
-          <li>
-            <div class="early-icon">🛡️</div>
-            <div><strong data-i18n="early_b4">30 kun — to'liq qaytarish</strong><br/><span data-i18n="early_b4s">Yoqmasa — savolsiz pulni qaytaramiz</span></div>
-          </li>
-        </ul>
-        <a href="#pricing" class="btn-primary btn-lg" data-i18n="early_cta">Dastlabki mijoz bo'lish →</a>
-      </div>
-      <div class="early-right">
-        <div class="early-counter">
-          <div class="early-counter-num">47</div>
-          <div class="early-counter-label" data-i18n="early_spots">erta kirish o'rni</div>
-        </div>
-        <div class="early-perks">
-          <div class="early-perk">✓ <span data-i18n="ep1">Start abadiy 149 000 so'mga</span></div>
-          <div class="early-perk">✓ <span data-i18n="ep3">Shaxsiy onboarding</span></div>
-          <div class="early-perk">✓ <span data-i18n="ep4">«Dastlabki mijoz» nishoni</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="pricing" id="pricing">
+<!-- PRICING + TRUST (вариант B, 2026-10) -->
+<section class="pricing rv-pricing" id="pricing">
   <div class="container">
     <div class="section-header">
-      <h2 data-i18n="pricing_title">Shaffof narxlar</h2>
-      <p data-i18n="pricing_sub">Yashirin to'lovlar yo'q. Kartasiz bepul boshlang.</p>
+      <h2 data-i18n="pr_title">Narxlar so‘mda. Bepul boshlang</h2>
+      <p data-i18n="pr_sub">Chat arizalar keltira boshlaganda to‘laysiz. Boshlash uchun karta kerak emas.</p>
     </div>
-    <div class="pricing-grid">
-      <!-- FREE -->
-      <div class="plan">
-        <div class="plan-name">Free</div>
-        <div class="plan-price"><strong>0</strong><span data-i18n="plan_forever">/abadiy</span></div>
-        <ul class="plan-features">
-          <li>✓ 1 <span data-i18n="plan_operator">operator</span></li>
-          <li>✓ 50 <span data-i18n="plan_dialogs">muloqot/oy</span></li>
-          <li>✓ 1 <span data-i18n="plan_site">sayt</span></li>
-          <li>✓ <span data-i18n="plan_widget">Chat vidjet (RU/UZ/EN)</span></li>
-          <li class="dim">✗ <span data-i18n="plan_ai_no">AI-maslahatchi</span></li>
-          <li class="dim">✗ <span data-i18n="plan_telegram">Telegram</span></li>
-          <li class="dim">✗ <span data-i18n="plan_white_label">White label</span></li>
-        </ul>
-        <a href="/register" class="btn-outline" data-i18n="plan_start">Boshlash</a>
+    <div class="rv-plans">
+      <div class="rv-plan">
+        <h3>Free</h3><div class="rv-for" data-i18n="pr_free_for">O‘z saytingizda sinab ko‘rish</div>
+        <div class="rv-price">0 <small data-i18n="pr_som">so‘m</small> <small data-i18n="pr_forever">muddatsiz</small></div>
+        <div class="rv-day"></div>
+        <ul><li data-i18n="pr_fr1">1 operator, 1 sayt</li><li data-i18n="pr_fr2">Oyiga 50 ta dialog</li><li data-i18n="pr_fr3">RU / UZ / EN vidjet</li><li class="no" data-i18n="pr_fr4">Telegram va AI-yordamchi</li></ul>
+        <div class="rv-cta"><a href="/register" class="btn-outline" data-i18n="pr_free_cta">Bepul boshlash</a>
+        </div>
       </div>
-      <!-- START -->
-      <div class="plan plan-popular">
-        <div class="plan-badge" data-i18n="plan_popular_badge">Mashhur</div>
-        <div class="plan-name">Start</div>
-        <div class="plan-price"><strong>149 000 so'm</strong><span data-i18n="plan_per_month">/oy</span></div>
-        <ul class="plan-features">
-          <li>✓ <span data-i18n="plan_up_to_3_ops">3 tagacha operator</span></li>
-          <li>✓ 500 <span data-i18n="plan_dialogs">muloqot/oy</span></li>
-          <li>✓ 3 <span data-i18n="plan_sites">sayt</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_ai_start">AI-maslahatchi: 3 sayt, 100 AI-suhbat/oy</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_kb_start">Bilim bazasi: 20 hujjatgacha</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_byok">O'z AI-kaliti → cheklovsiz</span></li>
-          <li>✓ <span data-i18n="plan_telegram">Telegram</span></li>
-          <li>✓ <span data-i18n="plan_white_label">White label</span> + Webhooks</li>
-        </ul>
-        <a href="/register" class="btn-primary" data-i18n="plan_trial">10 kun sinab ko'rish</a>
-        <div class="plan-guarantee">🛡 <span data-i18n="plan_guarantee_text">30 kun — pulni qaytarish kafolati</span></div>
+      <div class="rv-plan rec">
+        <div class="rv-badge" data-i18n="pr_rec">Tavsiya qilamiz</div>
+        <h3>Start</h3><div class="rv-for" data-i18n="pr_start_for">Do‘kon yoki xizmat, 1–3 menejer</div>
+        <div class="rv-price">149 000 <small data-i18n="pr_som">so‘m</small><small data-i18n="pr_mo">/oy</small></div>
+        <div class="rv-day" data-i18n="pr_start_day">kuniga ≈ 5 000 so‘m</div>
+        <ul><li data-i18n="pr_st1">3 tagacha operator, 3 sayt</li><li data-i18n="pr_st2">Oyiga 500 ta dialog</li><li data-i18n="pr_st3">Telegramdan javob</li><li data-i18n="pr_st4">AI-yordamchi: oyiga 100 ta dialog</li><li data-i18n="pr_st5">Chatda bizning logotip o‘rniga sizniki</li></ul>
+        <div class="rv-cta"><a href="/register" class="btn-primary" data-i18n="pr_start_cta">10 kun bepul sinab ko‘rish</a>
+          <div class="rv-cta-note" data-i18n="pr_refund">Yoqmasa — 30 kun ichida pulni qaytaramiz</div>
+        </div>
       </div>
-      <!-- BUSINESS -->
-      <div class="plan">
-        <div class="plan-name">Business</div>
-        <div class="plan-price"><strong>390 000 so'm</strong><span data-i18n="plan_per_month">/oy</span></div>
-        <ul class="plan-features">
-          <li>✓ <span data-i18n="plan_unlimited_ops">Cheksiz operatorlar</span></li>
-          <li>✓ <span data-i18n="plan_unlimited_dialogs">Cheksiz muloqotlar</span></li>
-          <li>✓ <span data-i18n="plan_unlimited_sites">Cheksiz saytlar</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_ai_business">AI-maslahatchi: 10 sayt, 300 AI-suhbat/oy</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_kb_business">Bilim bazasi: 100 hujjatgacha</span></li>
-          <li>✓ 🤖 <span data-i18n="plan_byok">O'z AI-kaliti → cheklovsiz</span></li>
-          <li>✓ <span data-i18n="plan_white_label">White label</span> + <span data-i18n="plan_custom_brand">Maxsus brending</span></li>
-          <li>✓ <span data-i18n="plan_priority">Ustuvor qo'llab-quvvatlash</span></li>
-        </ul>
-        <a href="/register" class="btn-outline" data-i18n="plan_choose_business">Business tanlash</a>
-        <div class="plan-guarantee">🛡 <span data-i18n="plan_guarantee_text">30 kun — pulni qaytarish kafolati</span></div>
+      <div class="rv-plan">
+        <h3>Business</h3><div class="rv-for" data-i18n="pr_biz_for">Bir nechta sayt yoki savdo bo‘limi</div>
+        <div class="rv-price">390 000 <small data-i18n="pr_som">so‘m</small><small data-i18n="pr_mo">/oy</small></div>
+        <div class="rv-day" data-i18n="pr_biz_day">kuniga ≈ 13 000 so‘m</div>
+        <ul><li data-i18n="pr_bz1">Operator, sayt va dialoglar cheklanmagan</li><li data-i18n="pr_bz2">AI-yordamchi: oyiga 300 ta dialog</li><li data-i18n="pr_bz3">100 tagacha hujjatli bilimlar bazasi</li><li data-i18n="pr_bz4">O‘z brendingiz</li><li data-i18n="pr_bz5">Ustuvor yordam</li></ul>
+        <div class="rv-cta"><a href="/register" class="btn-outline" data-i18n="pr_biz_cta">Business tanlash</a>
+          <div class="rv-cta-note" data-i18n="pr_refund">Yoqmasa — 30 kun ichida pulni qaytaramiz</div>
+        </div>
       </div>
     </div>
-    <div class="pricing-note">
-      <span data-i18n="pricing_note">Ishonmayapsizmi? Bizga yozing — biznesingizga mos tarifni tanlaymiz.</span>
-      <a href="/contact" data-i18n="pricing_contact">Bog'lanish →</a>
-    </div>
-
-    <div class="payment-row">
-      <div class="payment-label" data-i18n="payment_label">To'lov usullari:</div>
-      <div class="payment-methods">
-        <span class="pay-badge pay-logo">
-          <svg height="16" viewBox="0 0 780 500" xmlns="http://www.w3.org/2000/svg"><rect width="780" height="500" rx="40" fill="#1A1F71"/><circle cx="303" cy="250" r="150" fill="#EB001B"/><circle cx="477" cy="250" r="150" fill="#F79E1B"/><path d="M390 145.6A150 150 0 0 1 477.1 250 150 150 0 0 1 390 354.4 150 150 0 0 1 302.9 250 150 150 0 0 1 390 145.6z" fill="#FF5F00"/></svg>
-          <span>Visa / Mastercard</span>
-        </span>
-        <span class="pay-badge pay-logo pay-local">
-          <!-- Uzcard official color #0047BB -->
-          <svg height="20" viewBox="0 0 110 36" xmlns="http://www.w3.org/2000/svg">
-            <rect width="110" height="36" rx="6" fill="#0047BB"/>
-            <rect x="6" y="11" width="14" height="10" rx="2" fill="#FFD700" opacity=".9"/>
-            <rect x="6" y="11" width="14" height="4" rx="1" fill="#FFA500" opacity=".7"/>
-            <text x="27" y="24" font-family="Arial,Helvetica,sans-serif" font-size="12" font-weight="900" fill="white" letter-spacing=".5">UZCARD</text>
-          </svg>
-        </span>
-        <span class="pay-badge pay-logo pay-local">
-          <!-- Humo brand green #00A651 -->
-          <svg height="20" viewBox="0 0 84 36" xmlns="http://www.w3.org/2000/svg">
-            <rect width="84" height="36" rx="6" fill="#00A651"/>
-            <circle cx="14" cy="18" r="8" fill="white" opacity=".25"/>
-            <circle cx="20" cy="18" r="8" fill="white" opacity=".25"/>
-            <text x="32" y="24" font-family="Arial,Helvetica,sans-serif" font-size="13" font-weight="900" fill="white" letter-spacing=".5">HUMO</text>
-          </svg>
-        </span>
-        <span class="pay-badge pay-wire" data-i18n="payment_wire">🏦 Bank o'tkazma</span>
+    <p class="rv-pay" data-i18n="pr_pay">To‘lov: <b>Uzcard</b> · <b>Humo</b> · <b>Visa / Mastercard</b> · <b>Click</b> · <b>Uzum</b> · yuridik shaxslar uchun hisob va shartnoma</p>
+    <div class="rv-trust">
+      <div class="rv-card">
+        <h3 data-i18n="tr_h">Biz yangi xizmatmiz — buni ochiq aytamiz</h3>
+        <p data-i18n="tr_p">Begona logotiplar o‘rniga — o‘zingiz tekshira oladigan narsalar:</p>
+        <ul class="rv-honest">
+          <li><span class="rv-ic">💬</span><span data-i18n="tr_1"><b>Ushbu sahifa burchagidagi chat — bu Prochat.</b> Yozing — o‘zimiz javob beramiz.</span></li>
+          <li><span class="rv-ic">🤝</span><span data-i18n="tr_2"><b>Ulashga yordam beramiz:</b> chatni saytingizga o‘rnatamiz va javoblarni siz bilan birga sozlaymiz.</span></li>
+          <li><span class="rv-ic">🆓</span><span data-i18n="tr_3"><b>Free muddatsiz:</b> kerakli muddat bepul foydalaning, pullik tarif — Telegram va AI kerak bo‘lganda.</span></li>
+        </ul>
+      </div>
+      <div class="rv-card rv-case">
+        <span class="rv-slot" data-i18n="tr_case_slot">Bu yerda birinchi fikr bo‘ladi</span>
+        <p class="rv-quote" data-i18n="tr_case">Prochatni ulang va u sizda qanday ishlayotganini aytib bering — birinchi fikrlarni saytingizga havola bilan shu yerda joylaymiz.</p>
+        <button type="button" class="rv-case-cta" data-open-chat data-i18n="tr_case_cta">Bizga yozish →</button>
       </div>
     </div>
 
@@ -1077,7 +973,7 @@
   </div>
 </div>
 
-<script src="/main.js?v=6"></script>
+<script src="/main.js?v=7"></script>
 <!-- LiveChat AI widget -->
 <script>
   window.LiveChatSetup = {

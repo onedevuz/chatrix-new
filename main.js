@@ -1,6 +1,61 @@
 // ===== i18n TRANSLATIONS =====
 const translations = {
   ru: {
+    // вариант B главной (2026-10)
+    hb_offer: "Бесплатный тариф без срока: 1 оператор, 50 диалогов в месяц · Start — 10 дней бесплатно",
+    hb_title: "Онлайн-чат для сайта с ответами <span class=\"gradient-text\">из Telegram</span>",
+    hb_sub: "Клиент пишет на сайте по-узбекски или по-русски — сообщение сразу приходит вам в Telegram. Отвечаете с телефона, клиент видит ответ на сайте. Ночью отвечает ИИ-ассистент.",
+    hb_cta: "Подключить бесплатно →",
+    hb_ask: "Задать вопрос в чате",
+    hb_note: "Telegram и ИИ-ассистент — на тарифе Start, 149 000 сум/мес. Не подойдёт — вернём деньги в течение 30 дней.",
+    hb_s1_cap: "1 · На сайте",
+    hb_s1_h: "Клиент задаёт вопрос",
+    hb_s1_p: "Чат открывается на любой странице, на языке посетителя.",
+    hb_s2_cap: "2 · В Telegram",
+    hb_s2_h: "Вы отвечаете с телефона",
+    hb_s2_p: "Уведомление приходит в Telegram — ответ уходит клиенту на сайт.",
+    hb_s3_cap: "3 · Ночью",
+    hb_s3_h: "ИИ-ассистент отвечает сам",
+    hb_s3_p: "Отвечает по вашим текстам и прайсу, сложное оставляет вам на утро.",
+    pr_title: "Цены в сумах. Начните бесплатно",
+    pr_sub: "Платите, когда чат начнёт приносить заявки. Карта на старте не нужна.",
+    pr_rec: "Рекомендуем",
+    pr_som: "сум",
+    pr_mo: "/мес",
+    pr_forever: "без срока",
+    pr_free_for: "Попробовать на своём сайте",
+    pr_start_for: "Магазин или сервис, 1–3 менеджера",
+    pr_biz_for: "Несколько сайтов или отдел продаж",
+    pr_start_day: "≈ 5 000 сум в день",
+    pr_biz_day: "≈ 13 000 сум в день",
+    pr_fr1: "1 оператор, 1 сайт",
+    pr_fr2: "50 диалогов в месяц",
+    pr_fr3: "Виджет на RU / UZ / EN",
+    pr_fr4: "Telegram и ИИ-ассистент",
+    pr_st1: "До 3 операторов, 3 сайта",
+    pr_st2: "500 диалогов в месяц",
+    pr_st3: "Ответы из Telegram",
+    pr_st4: "ИИ-ассистент: 100 диалогов в месяц",
+    pr_st5: "Свой логотип в чате вместо нашего",
+    pr_bz1: "Без лимита операторов, сайтов и диалогов",
+    pr_bz2: "ИИ-ассистент: 300 диалогов в месяц",
+    pr_bz3: "База знаний до 100 документов",
+    pr_bz4: "Свой брендинг",
+    pr_bz5: "Приоритетная поддержка",
+    pr_free_cta: "Начать бесплатно",
+    pr_start_cta: "Попробовать 10 дней бесплатно",
+    pr_biz_cta: "Выбрать Business",
+    pr_refund: "Не подойдёт — вернём деньги в течение 30 дней",
+    pr_pay: "Оплата: <b>Uzcard</b> · <b>Humo</b> · <b>Visa / Mastercard</b> · <b>Click</b> · <b>Uzum</b> · счёт и договор для юрлиц",
+    tr_h: "Мы новый сервис — и говорим об этом прямо",
+    tr_p: "Вместо чужих логотипов — то, что можно проверить самому:",
+    tr_1: "<b>Чат в углу этой страницы — это Prochat.</b> Напишите — ответим мы сами.",
+    tr_2: "<b>Поможем подключить:</b> поставим чат на ваш сайт и настроим ответы вместе с вами.",
+    tr_3: "<b>Free без срока:</b> пользуйтесь бесплатно сколько нужно, платный тариф — когда понадобятся Telegram и ИИ.",
+    tr_case_slot: "Здесь будет первый отзыв",
+    tr_case: "Подключите Prochat и расскажите, как он работает у вас, — первые отзывы разместим здесь со ссылкой на ваш сайт.",
+    tr_case_cta: "Написать нам →",
+
     meta_title: "Prochat — Онлайн-чат и AI для вашего сайта",
     uc_title: "Для кого подходит Prochat",
     uc_sub: "Разные задачи — одно решение",
@@ -197,6 +252,61 @@ const translations = {
   },
 
   uz: {
+    // вариант B главной (2026-10)
+    hb_offer: "Muddatsiz bepul tarif: 1 operator, oyiga 50 ta dialog · Start — 10 kun bepul",
+    hb_title: "Sayt uchun onlayn-chat — <span class=\"gradient-text\">Telegramdan</span> javob bering",
+    hb_sub: "Mijoz saytda o‘zbek yoki rus tilida yozadi — xabar darhol Telegramingizga keladi. Telefondan javob berasiz, mijoz javobni saytda ko‘radi. Tunda AI-yordamchi javob beradi.",
+    hb_cta: "Bepul ulash →",
+    hb_ask: "Chatda savol berish",
+    hb_note: "Telegram va AI-yordamchi — Start tarifida, oyiga 149 000 so‘m. Yoqmasa — 30 kun ichida pulni qaytaramiz.",
+    hb_s1_cap: "1 · Saytda",
+    hb_s1_h: "Mijoz savol beradi",
+    hb_s1_p: "Chat istalgan sahifada, tashrif buyuruvchi tilida ochiladi.",
+    hb_s2_cap: "2 · Telegramda",
+    hb_s2_h: "Telefondan javob berasiz",
+    hb_s2_p: "Bildirishnoma Telegramga keladi — javob mijozga saytda yetib boradi.",
+    hb_s3_cap: "3 · Tunda",
+    hb_s3_h: "AI-yordamchi o‘zi javob beradi",
+    hb_s3_p: "Matnlaringiz va narxlaringiz bo‘yicha javob beradi, murakkabini ertalabga qoldiradi.",
+    pr_title: "Narxlar so‘mda. Bepul boshlang",
+    pr_sub: "Chat arizalar keltira boshlaganda to‘laysiz. Boshlash uchun karta kerak emas.",
+    pr_rec: "Tavsiya qilamiz",
+    pr_som: "so‘m",
+    pr_mo: "/oy",
+    pr_forever: "muddatsiz",
+    pr_free_for: "O‘z saytingizda sinab ko‘rish",
+    pr_start_for: "Do‘kon yoki xizmat, 1–3 menejer",
+    pr_biz_for: "Bir nechta sayt yoki savdo bo‘limi",
+    pr_start_day: "kuniga ≈ 5 000 so‘m",
+    pr_biz_day: "kuniga ≈ 13 000 so‘m",
+    pr_fr1: "1 operator, 1 sayt",
+    pr_fr2: "Oyiga 50 ta dialog",
+    pr_fr3: "RU / UZ / EN vidjet",
+    pr_fr4: "Telegram va AI-yordamchi",
+    pr_st1: "3 tagacha operator, 3 sayt",
+    pr_st2: "Oyiga 500 ta dialog",
+    pr_st3: "Telegramdan javob",
+    pr_st4: "AI-yordamchi: oyiga 100 ta dialog",
+    pr_st5: "Chatda bizning logotip o‘rniga sizniki",
+    pr_bz1: "Operator, sayt va dialoglar cheklanmagan",
+    pr_bz2: "AI-yordamchi: oyiga 300 ta dialog",
+    pr_bz3: "100 tagacha hujjatli bilimlar bazasi",
+    pr_bz4: "O‘z brendingiz",
+    pr_bz5: "Ustuvor yordam",
+    pr_free_cta: "Bepul boshlash",
+    pr_start_cta: "10 kun bepul sinab ko‘rish",
+    pr_biz_cta: "Business tanlash",
+    pr_refund: "Yoqmasa — 30 kun ichida pulni qaytaramiz",
+    pr_pay: "To‘lov: <b>Uzcard</b> · <b>Humo</b> · <b>Visa / Mastercard</b> · <b>Click</b> · <b>Uzum</b> · yuridik shaxslar uchun hisob va shartnoma",
+    tr_h: "Biz yangi xizmatmiz — buni ochiq aytamiz",
+    tr_p: "Begona logotiplar o‘rniga — o‘zingiz tekshira oladigan narsalar:",
+    tr_1: "<b>Ushbu sahifa burchagidagi chat — bu Prochat.</b> Yozing — o‘zimiz javob beramiz.",
+    tr_2: "<b>Ulashga yordam beramiz:</b> chatni saytingizga o‘rnatamiz va javoblarni siz bilan birga sozlaymiz.",
+    tr_3: "<b>Free muddatsiz:</b> kerakli muddat bepul foydalaning, pullik tarif — Telegram va AI kerak bo‘lganda.",
+    tr_case_slot: "Bu yerda birinchi fikr bo‘ladi",
+    tr_case: "Prochatni ulang va u sizda qanday ishlayotganini aytib bering — birinchi fikrlarni saytingizga havola bilan shu yerda joylaymiz.",
+    tr_case_cta: "Bizga yozish →",
+
     meta_title: "Prochat — Saytingiz uchun onlayn chat va AI",
     uc_title: "Prochat kimlar uchun",
     uc_sub: "Turli vazifalar — bitta yechim",
@@ -393,6 +503,61 @@ const translations = {
   },
 
   en: {
+    // вариант B главной (2026-10)
+    hb_offer: "Free plan with no time limit: 1 operator, 50 chats a month · Start — 10 days free",
+    hb_title: "Live chat for your website, <span class=\"gradient-text\">answered from Telegram</span>",
+    hb_sub: "A customer writes on your site in Uzbek or Russian — the message lands in your Telegram right away. You reply from your phone, they see it on the site. At night the AI assistant answers.",
+    hb_cta: "Connect for free →",
+    hb_ask: "Ask us in the chat",
+    hb_note: "Telegram and the AI assistant come with Start, 149 000 UZS/mo. Not a fit — money back within 30 days.",
+    hb_s1_cap: "1 · On your site",
+    hb_s1_h: "A customer asks",
+    hb_s1_p: "The chat opens on any page, in the visitor’s language.",
+    hb_s2_cap: "2 · In Telegram",
+    hb_s2_h: "You reply from your phone",
+    hb_s2_p: "The alert comes to Telegram — your reply goes back to the site.",
+    hb_s3_cap: "3 · At night",
+    hb_s3_h: "The AI assistant answers",
+    hb_s3_p: "It answers from your texts and prices and leaves hard questions for the morning.",
+    pr_title: "Prices in UZS. Start free",
+    pr_sub: "Pay once the chat starts bringing requests. No card to start.",
+    pr_rec: "Recommended",
+    pr_som: "UZS",
+    pr_mo: "/mo",
+    pr_forever: "no time limit",
+    pr_free_for: "Try it on your own site",
+    pr_start_for: "Shop or service, 1–3 managers",
+    pr_biz_for: "Several sites or a sales team",
+    pr_start_day: "≈ 5 000 UZS a day",
+    pr_biz_day: "≈ 13 000 UZS a day",
+    pr_fr1: "1 operator, 1 site",
+    pr_fr2: "50 chats a month",
+    pr_fr3: "RU / UZ / EN widget",
+    pr_fr4: "Telegram and AI assistant",
+    pr_st1: "Up to 3 operators, 3 sites",
+    pr_st2: "500 chats a month",
+    pr_st3: "Reply from Telegram",
+    pr_st4: "AI assistant: 100 chats a month",
+    pr_st5: "Your logo in the chat instead of ours",
+    pr_bz1: "Unlimited operators, sites and chats",
+    pr_bz2: "AI assistant: 300 chats a month",
+    pr_bz3: "Knowledge base up to 100 documents",
+    pr_bz4: "Custom branding",
+    pr_bz5: "Priority support",
+    pr_free_cta: "Start free",
+    pr_start_cta: "Try 10 days free",
+    pr_biz_cta: "Choose Business",
+    pr_refund: "Not a fit — money back within 30 days",
+    pr_pay: "Payment: <b>Uzcard</b> · <b>Humo</b> · <b>Visa / Mastercard</b> · <b>Click</b> · <b>Uzum</b> · invoice and contract for companies",
+    tr_h: "We are new — and we say so",
+    tr_p: "Instead of other people’s logos, things you can check yourself:",
+    tr_1: "<b>The chat in the corner of this page is Prochat.</b> Write — we answer ourselves.",
+    tr_2: "<b>We help you set up:</b> we install the chat on your site and tune the replies together with you.",
+    tr_3: "<b>Free has no time limit:</b> use it as long as you like, upgrade when you need Telegram and AI.",
+    tr_case_slot: "Your review goes here",
+    tr_case: "Connect Prochat and tell us how it works for you — we will publish the first reviews here with a link to your site.",
+    tr_case_cta: "Write to us →",
+
     meta_title: "Prochat — Live Chat & AI for Your Website",
     uc_title: "Who Prochat is for",
     uc_sub: "Different tasks — one solution",
@@ -730,24 +895,29 @@ if (cookieDecline) cookieDecline.addEventListener('click', () => {
 });
 
 // ===== STAGGER SCROLL ANIMATIONS =====
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.style.opacity = '1';
-      e.target.style.transform = 'translateY(0)';
-      observer.unobserve(e.target);
-    }
+// ===== SCROLL REVEAL =====
+// 2026-10: карточки больше не прячутся (opacity 0 до прокрутки давало пустые
+// области на скриншотах, при переходе по якорю и на медленных телефонах).
+// Анимация только для тех, кто ниже первого экрана, и с запасом 200px.
+const revealEls = document.querySelectorAll(
+  '.feature-card, .plan, .stat-card, .step, .integr-item, .roi-card, .uc-content, .cmp-table'
+);
+if ('IntersectionObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.transform = 'translateY(0)';
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0, rootMargin: '0px 0px 200px 0px' });
+  revealEls.forEach((el) => {
+    if (el.getBoundingClientRect().top < innerHeight) return;
+    el.style.transform = 'translateY(16px)';
+    el.style.transition = 'transform .45s ease';
+    observer.observe(el);
   });
-}, { threshold: 0.08 });
-
-document.querySelectorAll(
-  '.feature-card, .plan, .stat-card, .step, .integr-item, .roi-card, .uc-content, .early-card, .cmp-table'
-).forEach((el, i) => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = `opacity .5s ease ${(i % 6) * 80}ms, transform .5s ease ${(i % 6) * 80}ms`;
-  observer.observe(el);
-});
+}
 
 // ===== HERO CHAT ANIMATION =====
 function runHeroChat() {
@@ -1029,4 +1199,18 @@ document.querySelectorAll('.demo-tab').forEach(tab => {
     const split = document.getElementById('demoSplit');
     if (split) split.setAttribute('data-mode', mode === 'split' ? '' : mode);
   });
+});
+
+// ===== «Задать вопрос в чате»: открыть виджет Prochat на этой странице =====
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest && e.target.closest('[data-open-chat]');
+  if (!btn) return;
+  e.preventDefault();
+  try {
+    if (typeof window.LiveChat === 'function') { window.LiveChat('open'); return; }
+    const host = document.getElementById('livechat-ai-widget');
+    const b = host && host.shadowRoot && host.shadowRoot.querySelector('.lc-button');
+    if (b) { b.click(); return; }
+  } catch (err) {}
+  location.href = 'contact';
 });
